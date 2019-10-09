@@ -5,11 +5,60 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(http-equiv="X-UA-Compatib0.le", content="ie=edge")
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .double-content
+          section.main.section
+            .main__content.container
+              header.header
+                a.logo(href='#') АС
+                +nav('nav', ["Главная", "Обо мне", "Навыки", "Работы", "Связаться"])
+                ul.socials
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('insta', 'socials__icon')
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('vk', 'socials__icon')
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('github', 'socials__icon')
+              .main__section-columns
+                .main_left
+                  p Личный сайт веб разработчика
+                .main_right
+                  h1 Анна Сиренко
+              .main__scroll
+                p.scroll__desc Скролл
+                a(href="#")
+                  +icon('scroll', 'scroll__icon')
+          section.main
+            .main__content.container
+              header.header
+                a.logo(href='#') АС
+                +nav('nav', ["Главная", "Обо мне", "Навыки", "Работы", "Связаться"])
+                ul.socials
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('insta', 'socials__icon')
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('vk', 'socials__icon')
+                  li.socials__item
+                    a.socials__link(href='#')
+                      +icon('github', 'socials__icon')
+          
+                  
+                              //- +image('content/user.jpg', 'user-pic')
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        
+          section.main
+
+            include ./sections/header
+           
+              
+        
