@@ -1,11 +1,17 @@
 .skills{
   background: url('../images/content/фон2.jpg') no-repeat center center;
   background-size: cover;
+  position: relative;
 }
 
 .skills__content{
   height: 100vh;
   min-height: 650px;
+}
+
+.hands-pic{
+  position: absolute;
+  top: 9%;
 }
 
 .skills__section-columns{
@@ -18,7 +24,9 @@
 }
 
 .skills__about{
-  margin-left: 100px;
+  margin-left: 34%;
+  margin-bottom: 26px;
+  padding-top: 44px;
 }
 
 .skills__advantage{
@@ -34,7 +42,7 @@
   font-size: 16px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 96px;
+  /* margin-bottom: 96px; */
   width: 66%;
 }
 
@@ -43,7 +51,19 @@ h4{
   font-size: 24px;
   font-weight: bold;
   color: #fff;
-  margin-left: 130px;
-  margin-bottom: 50px;
+  /* /* margin-left: 130px; */
+  margin-bottom: 30px; 
 
+}
+
+.skills__level{
+  margin-left: 43%;
+}
+
+.skill__container{
+  position: relative;
+  margin-left: 30px;
+  &:first-child{
+    margin-left: 0;
+  }
 }
