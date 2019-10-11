@@ -9,6 +9,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
+  margin-top: 100px;
 }
 
 .works__section-body{
@@ -53,7 +54,7 @@
   }
   &__buttons{
     position: absolute;
-    width: calc(100% - 10vw);
+    left: calc(100% - 10vw);
     bottom: 60px;
     z-index: 1;
     
@@ -76,9 +77,10 @@
     &:hover{
       border: 1px solid $orange;
     }
-    &:active{
+    
+    /* &:active{
       border: 1px solid $orange;
-    }
+    } */
   }
   &-icon{
     width: 8px;
@@ -98,16 +100,25 @@
 
 .slider__thumbs{
   position: relative;
-  width: 178px;
+  width: 500px;
   flex-shrink: 0;
   cursor: pointer;
-  &-image{
+  display: flex;  
+    &-image{
     transition: .1s linear;
     &:hover{
-      border: 1px solid $orange;
+      border: 1px solid $orange;      
     }
+   
   }
 }
+
+.slider__thumbs-item:after{
+  border: 1px solid $orange; 
+}
+
+
+
 
 .works__desc-list{
   display: flex;
