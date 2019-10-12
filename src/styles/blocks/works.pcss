@@ -69,13 +69,14 @@
 .slider__buttons{
   display: flex;
   flex-direction: column;
+  transition: .1s linear;
   &-button{
     width: 50px;
     height: 50px;
     background-color: $dark;
     transition: .1s linear;
     &:hover{
-      border: 1px solid $orange;
+      background-color: $orange;
     }
     
     /* &:active{
@@ -91,7 +92,7 @@
     }
     &-prev{
       transform: rotate(-180deg);
-      opacity: 0.3;
+      
     }
   }
 }
@@ -174,22 +175,20 @@
   color: #586ed3;
 }
 
-/* .works__link-content:after {    
+.link__text:after {    
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
   content: "";
   display: block;
   height: 2px;
-  left: 50%;
   position: absolute;
   background: #586ed3;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.works__link-content:hover:after { 
-  width: 100%; 
-  left: 0; 
-} */
+.link__text:hover:after { 
+  width: 10%; 
+   
+}
 
 .site-link{
   width: 17px;

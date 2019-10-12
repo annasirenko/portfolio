@@ -6,10 +6,11 @@ mixin icon(name, className)
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
 
-mixin nav(className, items, activeItem)
-  nav(class=`${className}`)
-    ul(class=`${className}__list`)
-      each item, ndx in items
-        li(class=`${className}__item` + ( (ndx === activeItem ) ? ` ${className}__item_active` : ""))
-          a(class=`${className}__link` href='#')= item
+mixin nav(className)
+  - var section = [{"text": 'Главная', 'link': "#s1"}, {"text": 'Обо мне', 'link': "#s2"}, {"text": 'Навыки', 'link': "#s3"}, {"text": 'Работы', 'link': "#s4"}, {"text": 'Отзывы', 'link': "#s5"}, {"text": 'Связаться', 'link': "#s6"}]
+    nav(class=`${className}`)        
+      ul(class=`${className}__list`)            
+        each sec in section
+          li(class=`${className}__item`)
+            a(class=`${className}__link` href=sec.link)= sec.text
   

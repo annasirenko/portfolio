@@ -11,212 +11,42 @@ html(lang="en")
     .wrapper
       .maincontent
         .double-content
-          section.main.section
+          section#s1.main.section
             .main__content.container
-              header.header
-                a.logo(href='#') АС
-                +nav('nav', ["Главная", "Обо мне", "Навыки", "Работы", "Связаться"])
-                ul.socials
-                  li.socials__item
-                    a.socials__link(href='#')
-                      +icon('insta', 'socials__icon')
-                  li.socials__item
-                    a.socials__link(href='#')
-                      +icon('vk', 'socials__icon')
-                  li.socials__item
-                    a.socials__link(href='#')
-                      +icon('github', 'socials__icon')
-              .main__section-columns
-                .main_left
-                  p Личный сайт веб разработчика
-                .main_right
-                  h1 Анна Сиренко
-              .main__scroll
-                p.scroll__desc Скролл
-                a(href="#")
-                  +icon('scroll', 'scroll__icon')
-          section.about.section
-            .about__content.container
-              .about__section-columns
-                .about_main
-                  .about__pic
-                    +image('content/user1.jpg', 'user-pic')
-                  .about__info
-                    ul.about__info-left
-                      li Проживаю
-                      li Возраст
-                      li Родилась
-                    ul.about__info-right
-                      li Днепр
-                      li 23 года
-                      li 11 ноября
-                .about_desc
-                  .about_desc-upper
-                    p.desc-name Привет, меня зовут
-                    h2.desc-person Анна Сиренко
-                    p.desc-main Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                  .about_desc-lower
-                    p.about_desc-lower_par Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section.skills.section
-          +image('content/Руки.png', 'hands-pic')
-          .skills__content.container
-            .skills__section-columns
-              .skills__info
-                .skills__about
-                  h3.skills__advantage Чем я могу быть полезна вам
-                  p.skills__desc Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                .skills__level
-                  .skills__frontend
-                    h4 Front-end
-                    .skill__percentage
-                      .skill__container
-                        .skill__name HTML5
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -70s')
-                      .skill__container
-                        .skill__name CSS3
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40',  style='animation-delay: -60s')
-                          linearGradient#gradient
-                            stop(offset="0%" stop-color="#d0731b")
-                            stop(offset="100%" stop-color="#dc9322")
-                      .skill__container
-                        .skill__name Javascript
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-                      .skill__container
-                        .skill__name Jquery и Vue.js
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-                  .skills__workflow
-                    h4 Workflow
-                    .skill__percentage
-                      .skill__container
-                        .skill__name GIT
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -60s')
-                      .skill__container
-                        .skill__name Terminal
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-                      .skill__container
-                        .skill__name Gulp
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-                      .skill__container
-                        .skill__name Webpack
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -20s')
-                    
-        section.works.section
-          .works__content.container
-            h2.title-works Мои Работы
-            .works__section-body
-              .works__left
-                .works__slider(data-index="2")
-                  .works__slider__current
-                    +image('content/slider.jpg', 'works__slider__current-image')
-                  .works__slider__thumbs
-                    .slider__thumbs
-                      - for (var i=1; i<=4; i++)
-                        .slider__thumbs-item
-                          +image(`content/${i}.jpg`, 'slider__thumbs-image')
-                          
-                  .works__slider__buttons
-                    .slider__buttons
-                      button.slider__buttons-button
-                        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-next')
-                      button.slider__buttons-button
-                        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-prev')
-              .works__right
-                .works__desc
-                  ul.works__desc-list
-                    li.works__desc-item
-                      .item-text HTML
-                    li.works__desc-item
-                      .item-text CSS
-                    li.works__desc-item
-                      .item-text Javascript
-                .works__info
-                  h2.works__info-title Сайт школы образования
-                  .works__info-text Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
-                .works__link
-                  a.works__link-content(href="#" target="_blank")
-                    +icon('link', 'site-link')
-                    .link__text Посмотреть сайт
-        section.skills.section
-          +image('content/Руки.png', 'hands-pic')
-          .skills__content.container
-            .skills__section-columns
-              .skills__info
-                .skills__about
-                  h3.skills__advantage Чем я могу быть полезна вам
-                  p.skills__desc Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                .skills__level
-                  .skills__frontend
-                    h4 Front-end
-                    .skill__percentage
-                      .skill__container
-                        .skill__name HTML5
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -70s')
-                      .skill__container
-                        .skill__name CSS3
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40',  style='animation-delay: -60s')
-                          linearGradient#gradient
-                            stop(offset="0%" stop-color="#d0731b")
-                            stop(offset="100%" stop-color="#dc9322")
-                      .skill__container
-                        .skill__name Javascript
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-                      .skill__container
-                        .skill__name Jquery и Vue.js
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-                  .skills__workflow
-                    h4 Workflow
-                    .skill__percentage
-                      .skill__container
-                        .skill__name GIT
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -60s')
-                      .skill__container
-                        .skill__name Terminal
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-                      .skill__container
-                        .skill__name Gulp
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-                      .skill__container
-                        .skill__name Webpack
-                        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-                          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-                          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -20s')
-                    
-                    
-
-
+              include ./sections/header
+              include ./sections/main
               
-                  
-                              //- +image('content/user.jpg', 'user-pic')
+          section#s2.about.section
+            .about__content.container
+              include ./sections/about
+              
+        section#s3.skills.section
+          +image('content/Руки.png', 'hands-pic')
+          .skills__content.container
+            include ./sections/skills
+            include ./sections/percentage
+                    
+        section#s4.works.section
+          .works__content.container
+            
+            h2.title-works Мои Работы
+            include ./sections/works
+            
+        .double-content-second
+          section#s5.reviews.section
+            .reviews__content.container
+              include ./sections/slider
+              
+          section#s6.mail.section
+            .mail__container.container
+              .mail__content
+                h2.mail__content-title Связаться со мной
+                include ./sections/mail
+
+        .footer 
+          .footer__container.container
+            include ./sections/footer
+            
         //- +icon('link', 'link-class')
         //- .icon-bg
         
