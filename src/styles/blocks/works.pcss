@@ -100,7 +100,7 @@
 
 
 .slider__thumbs{
-  position: relative;
+  /* position: relative; */
   width: 500px;
   height: 100%;
   flex-shrink: 0;
@@ -117,9 +117,19 @@
   }
 }
 
-.slider__thumbs-item:after{
+.slider__thumbs-item:hover::after{
   border: 1px solid $orange;
-  position: absolute;
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider__thumbs-item_active:hover::after{
+  border: 1px solid $orange;
+  position: relative;
   content: "";
   top: 0;
   left: 0;
