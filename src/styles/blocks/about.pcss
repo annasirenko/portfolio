@@ -1,9 +1,13 @@
 .about__content{
-  height: 100vh;
-  min-height: 650px;
+  /* height: 100vh;
+  min-height: 650px; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about{
+  padding: 205px 160px;
 }
 
 .about__container{
@@ -72,7 +76,18 @@
   color: rgba(255, 255, 255, 0.5);
   margin-top: 105px;
   line-height: 1.88;
+  position: relative;
 }
+
+.about__desc-lower_par:before{
+  content: "*";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: red;
+  margin-right: 10px;
+}
+
 
 .desc-name{
   font-family: $Opensans;
