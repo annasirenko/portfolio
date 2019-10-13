@@ -104,13 +104,14 @@
 
 .email {
   background-image: svg-load('envelope.svg' fill=#636465, width=32px, height=32px);
-  /* &:active{
-    fill= $orange;
-  } */
+  &:focus {
+    fill: $orange;    
+  }
 }
 
 .comments {
   background-image: svg-load('message.svg' fill=#636465, width=32px, height=32px);
+  
 }
 
 /* .form__text:focus {
