@@ -32,19 +32,20 @@
   &-list{
     display: flex;
   }
-  &-item{
+  /* &-item{
     margin-right: 80px;
     &:last-child {
       margin-right: 0px;
     }
-  }
+  } */
 
   &-info{
     display: flex;
     width: 425px;
     min-height: 100px;
     margin-bottom: 20px;
-    color: #fff;
+    color: rgba(#fff, 0.5);
+    line-height: 1.67;
 
     &::before {
       content: svg-load('quote.svg' width=80px, height=80px, fill=#313131, fill-opacity=0.5);
@@ -78,7 +79,7 @@
   &__profession{
     margin-bottom: 20px;
     font-weight: 600;
-    color: #535354
+    color:rgba(#fff, 0.3);
   }
   &__user-info{
     width: 76px;

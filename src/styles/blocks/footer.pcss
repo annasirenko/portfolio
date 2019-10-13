@@ -9,10 +9,11 @@
   display: flex;  
 }
 
-.copyright {
+.footer__copyright {
   color: #47484a;
   font-weight: 600;
   font-size: 48px;
+  white-space: nowrap;
 }
 
 .footer__name {
@@ -25,12 +26,14 @@
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 35px;
+  text-transform: uppercase;
 }
 
 .footer__text{
   margin-bottom: 30px;
-  color: #47484a;
+  color: rgba(#fff, 0.3);
   font-size: 16px;
+  line-height: 1.67;
 }
 
 .footer__content {
@@ -51,10 +54,8 @@
 }
 
 .socials__item-footer{
-  padding: 10px;
-  margin-right: 45px;
-  width: 23px;
-  height: 23px;
+  /* padding: 10px;
+  margin-right: 45px; */
   border-radius: 50%;
   border: 1px solid #fff;
   display: flex;
@@ -65,3 +66,8 @@
     border-color: $orange;
   }
 }
+
+.socials__link{
+  padding: 10px;
+  
+  }

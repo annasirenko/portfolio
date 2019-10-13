@@ -11,39 +11,39 @@ html(lang="en")
     .wrapper
       .maincontent
         .double-content
-          section#s1.main.section
+          section#main.main.section
             .main__content.container
               include ./sections/header
               include ./sections/main
               
-          section#s2.about.section
+          section#about.about.section
             .about__content.container
               include ./sections/about
               
-        section#s3.skills.section
+        section#skills.skills.section
           +image('content/Руки.png', 'hands-pic')
           .skills__content.container
             include ./sections/skills
             include ./sections/percentage
                     
-        section#s4.works.section
+        section#works.works.section
           .works__content.container
             
             h2.title-works Мои Работы
             include ./sections/works
             
         .double-content-second
-          section#s5.reviews.section
+          section#reviews.reviews.section
             .reviews__content.container
-              include ./sections/slider
+              include ./sections/reviews
               
-          section#s6.mail.section
+          section#mail.mail.section
             .mail__container.container
               .mail__content
                 h2.mail__content-title Связаться со мной
                 include ./sections/mail
 
-        .footer 
+        footer.footer
           .footer__container.container
             include ./sections/footer
             

@@ -7,7 +7,7 @@ mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
 
 mixin nav(className)
-  - var section = [{"text": 'Главная', 'link': "#s1"}, {"text": 'Обо мне', 'link': "#s2"}, {"text": 'Навыки', 'link': "#s3"}, {"text": 'Работы', 'link': "#s4"}, {"text": 'Отзывы', 'link': "#s5"}, {"text": 'Связаться', 'link': "#s6"}]
+  - var section = [{"text": 'Главная', 'link': "#main"}, {"text": 'Обо мне', 'link': "#about"}, {"text": 'Навыки', 'link': "#skills"}, {"text": 'Работы', 'link': "#works"}, {"text": 'Отзывы', 'link': "#reviews"}, {"text": 'Связаться', 'link': "#mail"}]
     nav(class=`${className}`)        
       ul(class=`${className}__list`)            
         each sec in section
