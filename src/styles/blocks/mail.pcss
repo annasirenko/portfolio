@@ -1,8 +1,12 @@
 .mail{
   /* padding-top: 150px; */
-  padding: 205px 160px;
+  /* padding: 205px 160px; */
+  /* max-width: 953px; */
 }
-
+.mail__container{
+  max-width: 953px;
+  padding-bottom: 50px;
+}
 .mail__content-title{
   color: #ffff;
   font-weight: 700;
@@ -102,21 +106,21 @@
 .nameuser {
   background-image: svg-load('user.svg' fill=#636465, width=32px, height=32px);
   &:focus {
-    fill: $orange;    
+    background-image: svg-load('user.svg' fill=$orange, width=32px, height=32px);    
   }
 }
 
 .email {
   background-image: svg-load('envelope.svg' fill=#636465, width=32px, height=32px);
   &:focus {
-    fill: $orange;    
+    background-image: svg-load('envelope.svg' fill=$orange, width=32px, height=32px);   
   }
 }
 
 .comments {
   background-image: svg-load('message.svg' fill=#636465, width=32px, height=32px);
   &:focus {
-    fill: $orange;    
+    background-image: svg-load('message.svg' fill=$orange, width=32px, height=32px);   
   }
   
 }
