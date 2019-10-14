@@ -12,8 +12,7 @@
 .main__content{
   height: 100vh;
   min-height: 650px;
-  
-  
+  position: relative;
 
 }
 
@@ -30,14 +29,15 @@
   font-size: 18px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.4);
-  width: 16%;
+  /* width: 16%; */
   text-align: right;
-  margin-right: 35px;
+    
 }
 
 .main_right{
-  width: 39%;
+  margin-left: 40px;
 }
+
 
 h1{
   margin-top: 69px;
@@ -48,20 +48,21 @@ h1{
   line-height: 0.83;
 }
 
-.main__scroll-content{
+.main__scroll{
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  transform: translateX(-50%);
+
+&-content{
   display: flex;
   justify-content: center;
   /* margin-top: 160px; */
   text-align: center;
   /* position: relative; */
   /* z-index: 100;   */
-  /* position: absolute; */
-  /* bottom: 3400px;
-  left: 49%;
-  transform: translateX(-50%); */
-  margin: 0 auto 15px;
-  padding-top: 254px;
-  
+    /* margin: 0 auto 15px; */  
+}
 }
 
 .scroll__icon{
