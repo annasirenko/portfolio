@@ -5,11 +5,56 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(http-equiv="X-UA-Compatib0.le", content="ie=edge")
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .double-content
+          section#main.main.section
+            .main__content.container
+              include ./sections/header
+              include ./sections/main
+              
+          section#about.about
+            .about__container.container
+              include ./sections/about
+              
+        section#skills.skills
+          +image('content/Руки.png', 'hands-pic')
+          .skills__content.container
+            include ./sections/skills
+            include ./sections/percentage
+                    
+        section#works.works
+          .works__content.container
+            
+            h2.title-works Мои Работы
+            include ./sections/works
+            
+        .double-content-second
+          +image('content/1.png', 'leaves-pic')
+          section#reviews.reviews
+            
+            .reviews__content.container
+              include ./sections/reviews
+              
+          section#mail.mail
+            .mail__container.container
+              .mail__content
+                h2.mail__content-title Связаться со мной
+                include ./sections/mail
+
+        footer.footer
+          .footer__container.container
+            include ./sections/footer
+            
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        
+          section.main
+
+            include ./sections/header
+           
+              
+        

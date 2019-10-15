@@ -1,0 +1,33 @@
+.works__section-body
+  .works__left
+    .works__slider(data-index="2")
+      .works__slider__current
+        +image('content/slider.jpg', 'works__slider__current-image')
+      .works__slider__thumbs
+        .slider__thumbs
+          - for (var i=1; i<=4; i++)
+            .slider__thumbs-item.slider__thumbs-item_active
+              +image(`content/${i}.jpg`, 'slider__thumbs-image')
+              
+      .works__slider__buttons
+        .slider__buttons
+          button.slider__buttons-button
+            +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-next')
+          button.slider__buttons-button
+            +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-prev')
+  .works__right
+    .works__desc
+      ul.works__desc-list
+        li.works__desc-item
+          .item-text HTML
+        li.works__desc-item
+          .item-text CSS
+        li.works__desc-item
+          .item-text Javascript
+    .works__info
+      h2.works__info-title Сайт школы образования
+      .works__info-text Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool.
+    .works__link
+      a.works__link-content(href="#" target="_blank")
+        +icon('link', 'site-link')
+        .link__text Посмотреть сайт

@@ -1,0 +1,153 @@
+.double-content-second{
+  background: url('../images/content/Фон.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.leaves-pic{
+  position: absolute;
+  bottom:264px;
+  width: 572px;
+  right: 0;
+}
+
+.reviews__content{
+  /* height: 100vh;
+  min-height: 650px; */
+  margin-left: 100px;
+  position: relative;
+  z-index: 1;
+    
+}
+
+.reviews__slider{
+  padding-bottom: 62px;
+}
+/* .reviews{
+  padding: 205px 160px;
+} */
+.reviews__slider{
+
+  &-up{
+    display: flex;
+    margin-bottom: 68px;
+    padding-top: 200px;
+    align-items: center;
+  }
+
+  &-title{
+    margin-right: 128px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+  }
+
+  &-scroll{
+    display: flex;
+    /* margin-top: 32px; */
+  }
+
+  &-list{
+    display: flex;
+  }
+  /* &-item{
+    margin-right: 80px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  } */
+
+  &-info{
+    display: flex;
+    width: 425px;
+    min-height: 100px;
+    margin-bottom: 20px;
+    color: rgba(#fff, 0.5);
+    line-height: 1.67;
+
+    &::before {
+      content: svg-load('quote.svg' width=80px, height=80px, fill=#313131, fill-opacity=0.5);
+      margin-right: 20px;
+    }
+    
+  }
+
+  &-user{
+    display: flex;
+    margin-left: 85px;
+  
+    &-pic{
+      position: absolute;
+      top: 0;
+      max-width: 500%;
+      max-height: 500%;
+    }
+  }
+}
+
+  
+
+  .reviews{
+    &__username{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+  }
+  &__profession{
+    margin-bottom: 20px;
+    font-weight: 600;
+    color:rgba(#fff, 0.3);
+  }
+  &__user-info{
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* object-fit: cover;
+    object-position: top center; */
+    margin-right: 27px;
+  }
+}
+
+.button-block{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 30px;
+  
+  &:hover .slider-btn {
+    border: 2px solid $orange;
+  }
+
+  &:hover .slider-btn-icon {
+    fill:$orange;
+  }
+}
+
+.slider-btn{
+  transition: .3s linear;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  &-prev{
+    margin-right: 30px;
+  }
+
+  &-icon{
+    transition: .3s linear;
+    width: 8px;
+    height: 12px;
+    fill: #fff;
+    &-prev{
+      transform: rotate(180deg);
+    }
+  }
+
+}
+

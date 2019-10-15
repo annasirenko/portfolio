@@ -1,2 +1,3 @@
 Сиренко Анна
-Продвинутый веб 07.10.19
+Продвинутый веб
+https://github.com/annasirenko/portfolio.git

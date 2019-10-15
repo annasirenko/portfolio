@@ -1,0 +1,163 @@
+.mail{
+  /* padding-top: 150px; */
+  /* padding: 205px 160px; */
+  /* max-width: 953px; */
+}
+.mail__container{
+  margin-left: 100px;
+  padding-bottom: 50px;
+}
+.mail__content-title{
+  color: #ffff;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 98px;
+  padding-top: 118px;
+}
+
+.mail__form{
+  max-width: 881px;
+}
+
+.form__row {
+  flex: 1;
+  display: flex;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  display: block;
+
+  &-title {
+    color: #636465;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+
+  &-comments{
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+}
+
+.form__input{
+  background: none;
+  border: transparent;
+  border-bottom: 1px solid white;
+  padding: 20px 50px;
+  width: 100%;
+  height: 63px;
+  color: white;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 7px 12px;
+  transition:all .1s ease;
+  /* &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: #636465;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 50px;
+    transform: translateY(-20px);
+    transition:all .1s ease;
+  } */
+
+  &::placeholder {
+    color: white;
+    
+  }
+
+  &:focus {
+    border-bottom: 1px solid $orange;    
+  }
+
+  &-textarea {
+    resize: none;
+    /* height: 110px; */
+    transition:all .1s ease;
+    /* &:focus {
+      outline: none;
+    }
+  
+    &:focus::placeholder {
+      color: #636465;
+      font-weight: 600;
+      font-size: 16px;
+      margin-left: 50px;
+      transform: translateY(-20px);
+      transition:all .1s ease;
+    } */
+    
+  }
+}
+
+.form__btn{
+  padding-bottom: 166px;
+}
+.btn {
+  width: 348px;
+  height: 80px;
+  background: linear-gradient(to right, #d0731b, #dc9322);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: .3s linear;
+  
+  &:hover {
+      background: linear-gradient(to right, #d0731b, #ff9d00);        
+  }
+}
+
+
+.nameuser {
+  background-image: svg-load('user.svg' fill=#636465, width=32px, height=32px);
+  &:focus {
+    background-image: svg-load('user.svg' fill=$orange, width=32px, height=32px);    
+  }
+}
+
+.email {
+  background-image: svg-load('envelope.svg' fill=#636465, width=32px, height=32px);
+  &:focus {
+    background-image: svg-load('envelope.svg' fill=$orange, width=32px, height=32px);   
+  }
+}
+
+.comments {
+  background-image: svg-load('message.svg' fill=#636465, width=32px, height=32px);
+  &:focus {
+    background-image: svg-load('message.svg' fill=$orange, width=32px, height=32px);   
+  }
+  
+}
+
+/* .form__text:focus {
+  outline: none;
+}
+
+input::placeholder {
+  transition: 0.3s;
+  color: #fff;
+}
+
+input:focus::placeholder {
+  color: #636465;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 50px;
+  transform: translateY(-20px);
+} */

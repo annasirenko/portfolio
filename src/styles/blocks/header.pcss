@@ -1,0 +1,90 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  
+}
+
+.logo{
+  font-size: 36px;
+  font-weight: 800;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #fff; 
+
+}
+
+
+.nav__list {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+}
+
+.nav__link{
+  display:block;
+  position: relative;
+}
+
+.nav__link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: $orange;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav__link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  margin-right: 81px;
+  transition: .3s linear;
+  &:last-child{
+    margin-right: 0;
+  }
+  &:hover{
+    color:$orange;
+  }
+}
+
+
+.socials{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.socials__item{
+    display: inline-block;
+    margin-right: 30px;
+    
+  &:last-child{
+    margin-right: 0;
+  }
+  
+}
+
+.socials__icon{
+  height: 25px;
+  width: 25px;
+  fill: rgba(255, 255, 255, 0.7);
+  transition: .3s linear;
+  &:hover{
+     fill: $orange;
+  }
+}
+
+
