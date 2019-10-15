@@ -50,8 +50,8 @@ h1{
 
 .main__scroll{
   position: absolute;
-  bottom: 0;
-  left: 49%;
+  bottom: 10px;
+  left: 50%;
   transform: translateX(-50%);
 
 &-content{
@@ -62,6 +62,16 @@ h1{
   /* position: relative; */
   /* z-index: 100;   */
     /* margin: 0 auto 15px; */  
+    &:hover .scroll__icon{
+      animation-play-state: paused;
+      fill: $orange;
+    }
+
+    &:hover .scroll__desc{      
+        color: rgba($orange, 0.8);
+      
+
+    }
 }
 }
 
@@ -69,7 +79,9 @@ h1{
   height: 25px;
   width: 20px;
   fill:#fff;
+  transition: .3s linear; 
   animation: animated 1.7s infinite ease;
+  
 
 }
 
@@ -97,6 +109,9 @@ h1{
 .scroll__desc{
   /* margin-top: 5px; */
   margin-right: 10px;
+  font-weight: 600;
+  transition: .3s linear; 
+  
 }
 
 
