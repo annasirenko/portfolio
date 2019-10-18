@@ -4,14 +4,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .about{
   padding: 205px 160px;
+  /* @include desktopHd{
+  background: url('../images/content/black.png') no-repeat center center;
+  background-size: cover;
+} */
+
+
+@include phones{
+  padding: 100px 30px 0;
+
+}
+@include tablets{
+  padding: 205px 32px;
+}
 }
 
 .about__container{
   max-width: 953px;
+}
+
+.about__main{
+  @include phones{
+    margin-bottom: 46px;
+  }
 }
 /* 
 .about__section-columns{
@@ -32,6 +54,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 105px;
+
+  @include phones{
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 
 .about__pic{
@@ -42,6 +69,9 @@
   flex-shrink: 0;
   margin-top: 20px;
   box-shadow: 0px 65px 51px -26px rgba(0,0,0,0.75);
+  @include phones{
+    margin-left: 39px;
+  }
 }
 
 .user-pic{
@@ -53,6 +83,11 @@
 .about__desc{
   /* text-align: left; */
   margin-left: 166px;
+  @include phones{
+    margin-left: 0;
+  }
+
+  
   
 }
 
@@ -77,6 +112,10 @@
   margin-top: 105px;
   line-height: 1.88;
   position: relative;
+  @include phones{
+    margin-top: 57px;
+    padding-bottom: 64px;
+  }
 }
 
 .about__desc-lower_par:before{
@@ -88,6 +127,13 @@
   color: rgba(#d91414, 0.2);
   left: -50px;
   bottom: 50px;
+  @include phones{
+    bottom: 146px;
+  }
+
+  @include tablets{
+    bottom: 82px;
+  }
 }
 
 
@@ -133,5 +179,8 @@
     &:last-child{
       margin-bottom: 0;
     }
+  }
+  @include phones{
+    padding-left: 100px;
   }
 }

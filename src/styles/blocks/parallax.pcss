@@ -1,0 +1,108 @@
+.parallax{
+  position: absolute; 
+
+  &-container{
+    
+     background: url('../images/content/black.png');
+     background-size: contain;
+  
+}
+
+ 
+  &-section{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  @include tablets{
+    background: url('../images/content/фон1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+    &__layer{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      will-change: transform;
+
+      @include tablets{
+        display: none;
+      }
+
+      
+  
+      &:nth-child(1){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+  
+      &:nth-child(2){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 290px;
+      }
+      &:nth-child(3){
+        display: block;
+        top: 296px;
+        left: 50%;
+        margin-left: -215px;
+        @include tablets{
+          left: 50%;
+          margin-left: -374px;
+          top:504px;
+          text-align: center;
+        }
+      }
+      &:nth-child(4){
+        display: block;
+        top: 350px;
+        right: 50%;
+        margin-right: 275px;
+      }
+  
+      &:nth-child(5){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 400px;
+      }
+      &:nth-child(6){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 702px;
+      }
+      &:nth-child(7){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 701px;
+      }
+      &:nth-child(8){
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 705px;
+      }
+
+              
+
+  }
+
+  
+  }
+}
+
+.parallax-subtitle{
+  @include tablets{
+    left: 50%;
+    margin-left: -72px;
+  }
+}
+
+.parallax-title{
+ 
+}

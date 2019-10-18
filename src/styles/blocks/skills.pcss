@@ -2,6 +2,13 @@
   background: url('../images/content/фон2.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
+
+  @include phones {
+    padding: 95px 30px 260px;
+  }
+  @include tablets{
+    padding: 117px 0 44vw;
+  }
   
 }
 
@@ -13,6 +20,12 @@
   position: absolute;
   bottom:-54px;
   width: 400px;
+  @include tablets{
+    left: 50%;
+    bottom: 0;
+    width: 44vw;
+    transform: translate(-50%,10vw) rotate(-90deg);
+  }
 }
 
 .skills__section-columns{
@@ -21,6 +34,9 @@
   align-items: center;
   flex: 1;
   padding-top: 205px;
+  @include phones{
+    padding-top: 0;
+  }
   
   /* margin-left: 288px;
   padding-top: 150px; */
@@ -30,6 +46,10 @@
   margin-left: 34%;
   margin-bottom: 74px;
   /* padding-top: 44px; */
+  @include tablets{
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .skills__advantage{
@@ -38,6 +58,20 @@
   font-weight: bold;
   color: #fff;
   margin-bottom: 60px;
+
+  @include phones{
+    width: 82%;
+    text-align: left;
+  }
+  @include tablets{
+    align-self: center;
+    max-width: 398px;
+    margin-left: 0;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
 }
 
 .skills__desc{
@@ -48,6 +82,24 @@
   /* margin-bottom: 96px; */
   width: 66%;
   line-height: 1.67;
+  @include phones{
+    width: 100%;
+    text-align: left;
+    
+  }
+
+  @include tablets{
+    align-self: center;
+    max-width: 440px;
+    margin-left: 0;
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  
 }
 
 .skills__workflow-name{
@@ -57,12 +109,35 @@
   color: #fff;
   /* /* margin-left: 130px; */
   margin-bottom: 14px; 
+  @include phones{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  @include tablets{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
 
 }
 
 .skills__level{
   margin-left: 43%;
   padding-bottom: 160px;
+  @include phones{
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-top: 60px;
+       
+  }
+
+  @include tablets{
+    margin-left: 0;
+    padding-bottom: 0px;
+    padding-top: 60px;
+    
+  }
 }
 
 .skill__container{
@@ -71,6 +146,12 @@
   &:first-child{
     margin-left: 0;
   }
+  @include tablets{
+    margin: 13px 25px;
+    &:not(:last-child) {
+      margin-right: 13px;
+  }
+}
 }
 
 .skills__frontend{

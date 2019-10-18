@@ -2,6 +2,9 @@
   background: url('../images/content/Фон.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
+  @include tablets{
+    padding: 100px 32px 110px;
+  }
 }
 
 .leaves-pic{
@@ -9,6 +12,14 @@
   bottom:264px;
   width: 572px;
   right: 0;
+  @include phones{
+    display: none;
+  }
+
+  @include tablets{
+    left: 60%;
+    bottom: 136px;
+  }
 }
 
 .reviews__content{
@@ -17,6 +28,9 @@
   margin-left: 100px;
   position: relative;
   z-index: 1;
+  @include tablets{
+    margin-left: 0;
+  }
     
 }
 
@@ -33,6 +47,30 @@
     margin-bottom: 68px;
     padding-top: 200px;
     align-items: center;
+    @include phones{
+      padding-top: 0;
+      margin-bottom: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include tablets{
+      padding-top: 0;
+
+    }
+  }
+
+  &-desc{
+    overflow: hidden;
+    @include desktopHd{
+      max-width: 983px;    
+    }
+    @include tablets{
+      max-width: 599px;
+    }
+    @include phones{
+      max-width: 343px;
+    }
   }
 
   &-title{
@@ -40,11 +78,21 @@
     font-weight: 700;
     font-size: 36px;
     color: #fff;
+    @include phones{
+      margin-right: 20px;
+      font-size: 24px;
+      width: 101%;
+    }
   }
 
   &-scroll{
     display: flex;
     /* margin-top: 32px; */
+    @include phones{
+    margin: 26px 0;
+    width: 100%;
+    justify-content: center;
+    }
   }
 
   &-list{
@@ -64,10 +112,27 @@
     margin-bottom: 20px;
     color: rgba(#fff, 0.5);
     line-height: 1.67;
+    @include phones{
+    font-size: 14px;
+    line-height: 1.5;
+    width: 260px;
+    }
 
     &::before {
       content: svg-load('quote.svg' width=80px, height=80px, fill=#313131, fill-opacity=0.5);
       margin-right: 20px;
+      @include phones{
+        display: none;
+        
+      }
+      
+    }
+    @include tablets {
+    
+      &::before {
+        content: svg-load('../../images/icons/quote.svg' width=30px, height=30px, fill=#313131, fill-opacity=0.5);
+        margin-right: 10px;
+      }
     }
     
   }
@@ -75,15 +140,27 @@
   &-user{
     display: flex;
     margin-left: 85px;
+    @include phones{
+      margin-left: 0;
+    }
   
     &-pic{
       position: absolute;
       top: 0;
       max-width: 500%;
       max-height: 500%;
-    }
+    }    
+    
   }
+
+  
 }
+
+/* .reviews__slider-item{
+  @include desktopHd{
+    margin-right: 292px;
+  }
+} */
 
   
 
@@ -93,6 +170,9 @@
     font-weight: 700;
     font-size: 18px;
     color: #fff;
+    @include phones{
+      margin-bottom: 0;
+    }
   }
   &__profession{
     margin-bottom: 20px;
@@ -110,6 +190,10 @@
     /* object-fit: cover;
     object-position: top center; */
     margin-right: 27px;
+    @include phones{
+    width: 50px;
+    height: 50px;
+    }
   }
 }
 

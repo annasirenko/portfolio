@@ -1,7 +1,7 @@
 header.header
   a.logo(href='#') АС
-  +nav('nav')
-  ul.socials
+  +nav('nav', 'nav__header')
+  ul.socials.socials__header
     li.socials__item
       a.socials__connect(href='#' target="_blank")
         +icon('insta', 'socials__icon')
@@ -11,3 +11,24 @@ header.header
     li.socials__item
       a.socials__connect(href='#' target="_blank")
         +icon('github', 'socials__icon')
+  
+  button.header__hamburger.hamburger
+    .hamburger__line
+    .hamburger__line
+    .hamburger__line
+  
+  .header__sidebar
+    .sidebar
+      .sidebar__menu
+        +menu('nav', 'nav__sidebar')
+      .sidebar__socials
+        ul.socials.socials__dark
+          li.socials__item
+            a.socials__connect(href='#' target="_blank")
+              +icon('insta', 'socials__icon')
+          li.socials__item
+            a.socials__connect(href='#' target="_blank")
+              +icon('vk', 'socials__icon')
+          li.socials__item
+            a.socials__connect(href='#' target="_blank")
+              +icon('github', 'socials__icon')

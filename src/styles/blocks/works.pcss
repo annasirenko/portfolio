@@ -2,6 +2,19 @@
   padding: 180px 0px;
   width: 100%;
   background-color: white;
+
+  @include desktopHd{
+    padding: 130px 0;
+  }
+
+  @include desktop{
+    padding: 105px 0;
+  }
+
+  @include phones{
+    padding: 90px 0;
+
+  }
 }
 
 /* .works__content{
@@ -14,11 +27,22 @@
   font-weight: 700;
   line-height: 48px;
   /* margin-top: 100px; */
+  @include desktop{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .works__section-body{
   display: flex;
   margin-top: 92px;
+  @include tablets{
+    flex-direction: column;
+  }
+  
 }
 
 .works__left{
@@ -29,6 +53,13 @@
   position: relative;
   width: 100%;
   height: 30vw;
+  @include phones{
+    height: 58vw;
+  }
+  @include tablets{
+    height: 46vw;
+  }
+  
 
   &::after{
     content: attr(data-index);
@@ -39,6 +70,7 @@
     font-size: 22vw;
     font-weight: 900;
     line-height: 0.78;
+   
   }
 
   &__current{
@@ -46,6 +78,10 @@
     width: calc(100% - 10vw);
     height: 100%;
     z-index: 1;
+    @include phones {
+      width: 100%;
+    }
+    
   }
 
   &__thumbs{
@@ -54,6 +90,13 @@
     bottom: 60px;
     z-index: 1;
     height: 100px;
+    /* width: 712px; */
+    @include phones{
+      display: none;
+    }
+
+   
+   
     
   }
   &__buttons{
@@ -61,6 +104,14 @@
     left: calc(100% - 10vw);
     bottom: 60px;
     z-index: 1;
+    
+    @include phones{
+      left: auto;
+      right: 0;
+      bottom: 0;
+      
+    }
+   
     
   }
   &__current-image{
@@ -148,6 +199,7 @@
   height: 100%;
   position: relative;
   
+  
 }
 
 
@@ -156,6 +208,9 @@
 .works__desc-list{
   display: flex;
   margin-bottom: 50px;
+  @include phones{
+    justify-content: center;
+  }
 }
 
 .works__desc-item{
@@ -182,16 +237,39 @@
     font-size: 30px;
     font-weight: 700;
     color: $dark;
+    @include phones{
+    font-size: 24px;
+    margin-top: 26px;
+    text-align: left;
+
+    
+    }
+    @include tablets{      
+      text-align: center;
+      width: 314px;
+    
+    }
   }
   &-text{
     color: $dark;
     line-height: 1.67;
+
+    @include tablets {
+      font-size: 14px;
+      text-align: center;
+      width: 332px;
+    }
   }
 }
 
 .works__link-content{
   display: flex;
   color: #586ed3;
+
+  @include tablets{
+    font-size: 14px;
+    justify-content: center;
+  }
 }
 
 .link__text:after {    
@@ -214,4 +292,17 @@
   height: 17px;
   fill: #586ed3;
   margin-right: 20px;
+}
+
+.works__right{
+  @include phones{
+    padding: 0 30px;
+  }
+
+  @include tablets{
+    align-self: center;
+    
+    margin-top: 60px;
+    padding: 0 30px;
+  }
 }

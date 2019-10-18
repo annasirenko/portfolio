@@ -1,0 +1,135 @@
+.header__hamburger{
+  position: absolute;
+  z-index: 1;
+  display: none;
+  outline: none;
+  @include tablets {
+    display: block;
+    }
+  }
+
+
+.hamburger {
+  position: absolute;
+  top: 60.8px;
+  right: 8px;
+  z-index: 1;
+
+  width: 24px;
+  height: 20px;
+  background: none;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.2s ease;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &_closed > &__line {
+    background-color: $dark;
+    &:nth-child(1) {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
+
+  &_closed + .header__sidebar {
+    transform: translateX(-100%);
+  }
+
+}
+
+
+.header__sidebar{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  width: 326px;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+
+    @include tablets {
+      display: block;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+  }
+
+
+  .sidebar{    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 65px;
+  background-color: #fff;
+}
+  
+.sidebar__socials {
+  margin-top: 35px;
+}
+
+.nav{
+  &_sidebar &__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    color: $dark;
+  }
+  &_sidebar &__link {
+    font-size: 18px;
+    color: $dark;
+    font-weight: 600;
+    line-height: 48px;
+  }
+}
+
+.nav__wrapper{
+  flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: #2d3c4e;
+    font-weight: 600;
+    line-height: 48px;
+}
+  
+.socials__dark .socials__icon{
+  fill: #2d3c4e;
+  
+}
+
+.socials__dark .socials{
+  justify-content: flex-start;
+  
+}
+
+
