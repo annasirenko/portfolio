@@ -1,51 +1,31 @@
-.skills__level
-  .skills__frontend
-    .skills__workflow-name Front-end
-    .skill__percentage
-      .skill__container
-        .skill__name HTML5
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -70s')
-      .skill__container
-        .skill__name CSS3
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40',  style='animation-delay: -60s')
-          linearGradient#gradient
-            stop(offset="0%" stop-color="#d0731b")
-            stop(offset="100%" stop-color="#dc9322")
-      .skill__container
-        .skill__name Javascript
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-      .skill__container
-        .skill__name Jquery и Vue.js
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-  .skills__workflow
-    .skills__workflow-name Workflow
-    .skill__percentage
-      .skill__container
-        .skill__name GIT
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -60s')
-      .skill__container
-        .skill__name Terminal
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -40s')
-      .skill__container
-        .skill__name Gulp
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -30s')
-      .skill__container
-        .skill__name Webpack
-        svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
-          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
-          circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -20s')
+.skills__level 
+  #skills-component
+  script(type="text/x-template")#skills-list
+    ul.skills__list(ref="skills")
+      li.skills__item(v-for="skill in skills" :key="skill.skillsGroup")
+        skills-row(
+          :skill="skill"
+          
+      )
+  script(type="text/x-template")#skills-row    
+    .skills__row
+      .skills__workflow-name {{ skill.skillsGroup }}
+      ul.skill__percentage
+        li.skill__container(v-for="(skillPercent, skillName) in skill.skills")
+          skill(
+            :skillName="skillName"
+            :skillPercent="skillPercent"
+            
+          )
+  script(type="text/x-template")#skill
+    .skill
+      .skill__name {{ skillName }}
+      svg.percentage(viewBox='0 0 100 100', preserveAspectRatio='none')
+        circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
+        circle.skill__circle.skill__circle_above(cx='50', cy='50', r='40', style='animation-delay: -70s' ref="color-circle")
+        linearGradient#gradient
+          stop(offset="0%" stop-color="#d0731b")
+          stop(offset="100%" stop-color="#dc9322")
+        
+            
     

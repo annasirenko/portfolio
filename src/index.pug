@@ -6,6 +6,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatib0.le", content="ie=edge")
+    link(rel="shortcut icon" href="../images/content/favicon.ico" type="image/x-icon")
     title Portfolio | main page
   body
     .wrapper
@@ -23,11 +24,11 @@ html(lang="en")
             .parallax-section__layer(data-speed="0.4")
               +image('content/train.png', 'parallax')
             .parallax-section__layer(data-speed="0.7")
-              +image('content/grass.png', 'parallax')
-            .parallax-section__layer(data-speed="0.75")
+              +image('content/grasss.png', 'parallax')
+            .parallax-section__layer.parallax-section__layer_first-gradient(data-speed="0.75")
               +image('content/bg1.png', 'parallax')
               
-            .parallax-section__layer(data-speed="0.8")
+            .parallax-section__layer.parallax-section__layer_second-gradient(data-speed="0.8")
               +image('content/bg2.png', 'parallax')
               
           
@@ -69,7 +70,7 @@ html(lang="en")
           .footer__container.container
             include ./sections/footer
         
-            
+    
       //- +icon('link', 'link-class')
       //- .icon-bg
       
