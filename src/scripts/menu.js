@@ -21,8 +21,8 @@ function isMenuOpened() {
  }
 
 hamburger.addEventListener('click', function(e) {
-  e.preventDefault();
-   if(isMenuOpened){
+  e.stopPropagation();
+   if(isMenuOpened()){
           closeHamburgerMenu();
             
    } else{
@@ -40,7 +40,7 @@ hamburger.addEventListener('click', function(e) {
   });
 
   sidebar.addEventListener('click', function(e){
-    e.preventDefault();
+    e.stopPropagation();
         
     if(e.target.classList.contains('.nav__link')){
       closeHamburgerMenu();

@@ -206,14 +206,7 @@
   border-radius: 50%;
   margin-right: 30px;
   
-  &:not(:disabled):hover .slider-btn {
-    border: 2px solid $orange;
-  }
-
-  &:not(:disabled):hover .slider-btn-icon {
-    fill:$orange;
-  }  
-  
+    
 }
 
 .slider-btn{
@@ -232,6 +225,14 @@
     opacity: 0.5;
     cursor: default;
   }
+
+  &:not(:disabled):hover {
+    border: 2px solid $orange;
+  }
+
+  &:not(:disabled):hover .slider-btn-icon {
+    fill:$orange;
+  }  
 
   &-icon{
     transition: .3s linear;
