@@ -1,11 +1,16 @@
 .skill__percentage{
   display:flex;
   flex-wrap: wrap;
+    
+  @include phones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    
+  }
 
-  
   @include tablets{
     justify-content: center;
-    
   }
   
   

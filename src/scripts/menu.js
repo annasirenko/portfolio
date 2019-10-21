@@ -1,7 +1,7 @@
 const closed = 'hamburger_closed';
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
-const menuItems = document.querySelectorAll('.nav__link');
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 function openHamburgerMenu(){
   document.body.style.overflow = 'hidden';
@@ -39,11 +39,6 @@ hamburger.addEventListener('click', function(e) {
     }
   });
 
-  sidebar.addEventListener('click', function(e){
-    e.stopPropagation();
-        
-    if(e.target.classList.contains('.nav__link')){
-      closeHamburgerMenu();
-    }
-
-  });
+  for (let anchor of anchors){
+    anchor.addEventListener('click', closeHamburgerMenu);
+  }

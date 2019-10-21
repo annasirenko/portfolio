@@ -57,6 +57,9 @@
   align-items: center;
   margin-right: 81px;
   transition: .3s linear;
+  @include desktop{
+    margin-right: 33px;
+  }
   &:not(:last-child){
   
 
@@ -64,6 +67,7 @@
       margin-right: 0;
       flex-basis: 50%;
     }
+    
     /* @include tablets{
       &:nth-child(4){
         margin-right: 0;

@@ -11,10 +11,9 @@
 
 .about{
   padding: 205px 160px;
-  /* @include desktopHd{
-  background: url('../images/content/black.png') no-repeat center center;
-  background-size: cover;
-} */
+  @include desktop{
+    padding: 205px 0;
+}
 
 
 @include phones{
@@ -127,13 +126,15 @@
   color: rgba(#d91414, 0.2);
   left: -50px;
   bottom: 50px;
-  @include phones{
-    bottom: 146px;
-  }
 
   @include tablets{
     bottom: 82px;
   }
+  @include phones{
+    bottom: 146px;
+  }
+
+  
 }
 
 

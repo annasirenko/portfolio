@@ -52,13 +52,17 @@
 .works__slider{
   position: relative;
   width: 100%;
-  height: 30vw;
-  @include phones{
-    height: 58vw;
+  height: 510px;
+  @include desktop{
+    height: 468px;
   }
   @include tablets{
     height: 46vw;
   }
+  @include phones{
+    height: 262px;
+  }
+ 
   
 
   &::after{
