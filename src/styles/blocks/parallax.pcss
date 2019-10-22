@@ -1,9 +1,9 @@
 .parallax{
   position: absolute; 
-  height: 120vh; 
+  
 
   &-container{
-    
+    position: relative;
      background: url('../images/content/black.png');
      background-size: contain;
   
@@ -11,12 +11,20 @@
 
  
   &-section{
-  position: relative;
-  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 120vh; 
   overflow: hidden;
   @include tablets{
     background: url('../images/content/фон1.jpg') no-repeat center center;
     background-size: cover;
+  }
+
+  &__image{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100% 
   }
 
     &__layer{
@@ -45,63 +53,90 @@
         width: 100%;
         height: 55vh;
         top: 28vh;
+        .parallax-section__image{
+          object-fit: cover;
+          width: 100%;
+          height: 100%          
+        }
+
       }
       &:nth-child(3){
         display: block;
-        top: 26vh;
+        top: 26%;
         left: 50%;
         margin-left: -215px;
         @include tablets{
-          margin-left: -406px;
-          top:437px;
+          left: 0;
+          top:222px;
           text-align: center;
+          margin-left: 0;
         }
         @include phones{
-          margin-left: -278px;
+          margin-left: 0;
+          right: 0;
+          left: 0;
         }
       }
       &:nth-child(4){
         display: block;
-        top: 37vh;
+        top: 31%;
         right: 50%;
         left: auto;
         width: auto;
-        margin-right: 243px;
+        margin-right: 260px;
         @include tablets{
-          top: 430px;
-          margin-right: -109px;
+          top: 222px;
+          margin-right: -77px;
           text-align: center;
-
+          
         }
         @include phones{
-          right: 55%;
+          right: 48%;
         }
       }
   
       &:nth-child(5){
-        object-fit: cover;
         width: 100%;
-        height: 48vh;
+        height: 38vh;
         top: 40vh;
+        object-position: top;
+        .parallax-section__image{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-position: top;        
+        }
       }
       &:nth-child(6){
-        object-fit: cover;
+        position: absolute;
         width: 100%;
-        height: 40vh;
-        top: 77vh;
+        height: 50vh;
+        top: auto;
+        bottom: 0px;
+        
+        
         
       }
       &:nth-child(7){
         object-fit: cover;
         width: 100%;
-        height: 61vh;
-        top: 74vh;
+        height: 50vh;
+        top: auto;        
+        bottom: 0px;
+        .parallax-section__image{
+          bottom: -1px;
+        }
+        
       }
       &:nth-child(8){
         object-fit: cover;
         width: 100%;
-        height: 54vh;
-        top: 74vh;
+        height: 50vh;
+        top: auto;        
+        bottom: 0px;
+        .parallax-section__image{
+          bottom: -1px;
+        }
       }
 
            
@@ -120,5 +155,9 @@
 }
 
 .parallax-title{
- 
+  @include phones{
+    font-size: 20px;
+  }
+  
 }
+

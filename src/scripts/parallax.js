@@ -10,6 +10,9 @@ function moveLayersDependsOnScroll(wScroll){
 }
 
 window.addEventListener('scroll', e =>{
-  const wScroll = window.pageYOffset;
-  moveLayersDependsOnScroll(wScroll);
+  if(window.innerWidth > 768){
+    const wScroll = window.pageYOffset;
+    moveLayersDependsOnScroll(wScroll);
+  }
+  
 })

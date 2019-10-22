@@ -61,7 +61,9 @@
     margin-right: 33px;
   }
   &:not(:last-child){
-  
+    @include tablets{
+      margin-bottom: 20px;
+    }
 
     @include phones {
       margin-right: 0;
@@ -77,6 +79,9 @@
   
   &:last-child{
     margin-right: 0;
+    @include tablets{
+      margin-bottom: 20px;
+    }
   }
   &:hover{
     color:$orange;
@@ -112,6 +117,12 @@
 
 .socials__header{
   @include tablets{
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 9.375rem;
+  }
+  @include phones{
     display: none;
   }
 }

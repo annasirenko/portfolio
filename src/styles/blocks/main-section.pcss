@@ -47,6 +47,9 @@
   font-weight: 800;
   color: #fff;
   line-height: 0.83;
+  @include phones{
+    font-size: 56px;
+  }
 }
 
 .main-subtitle{
@@ -63,6 +66,9 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  @include tablets{
+    display: none;
+  }
 
 &-content{
   display: flex;
