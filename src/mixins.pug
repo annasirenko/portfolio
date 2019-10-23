@@ -27,7 +27,7 @@ mixin navigation(className, classNameTwo)
     nav(class=`${className} ${classNameTwo}`)        
       ul(class=`${className}__content`)            
         each sec in section
-          li(class=`${className}__item`)
+          li(class=`${className}__content-item`)
             a(class=`${className}__link` href=sec.link)= sec.text
 
             

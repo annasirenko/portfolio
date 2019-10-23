@@ -25,7 +25,7 @@
 .reviews__content{
   /* height: 100vh;
   min-height: 650px; */
-  margin-left: 100px;
+  
   position: relative;
   z-index: 1;
   @include tablets{
@@ -34,6 +34,11 @@
     
 }
 
+@include phones{
+  .reviews__content.container{
+    width: 100%;
+  }
+}
 .reviews__slider{
   padding-bottom: 62px;
 }
@@ -78,6 +83,9 @@
     font-weight: 700;
     font-size: 36px;
     color: #fff;
+    @include desktop{
+      font-size: 1.875rem;
+    }
     @include phones{
       margin-right: 20px;
       font-size: 24px;
@@ -107,11 +115,15 @@
 
   &-info{
     display: flex;
-    width: 425px;
+    
     min-height: 100px;
     margin-bottom: 20px;
     color: rgba(#fff, 0.5);
     line-height: 1.67;
+    @include desktopHd{
+      min-height:  8.25rem;
+    }
+    
     @include phones{
     font-size: 14px;
     line-height: 1.5;
@@ -127,11 +139,11 @@
       }
       
     }
-    @include tablets {
+    @include desktop {
     
       &::before {
         content: svg-load('../../images/icons/quote.svg' width=30px, height=30px, fill=#313131, fill-opacity=0.5);
-        margin-right: 10px;
+        margin-right: 26px;
       }
     }
     

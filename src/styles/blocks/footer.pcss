@@ -3,6 +3,11 @@
   background-color: #222427;
   color: white;
   padding: 86px 0px 0px 0px;
+  @include desktop{
+    padding: 86px 0px 86px;
+    height: 100%;
+
+  }
   @include tablets{
     padding: 65px 32px 60px;
     height: 100%;
@@ -76,8 +81,9 @@
 }
 
 .nav__footer{
-  @include tablets{
+  @include desktop{
     width: 450px;
+    
   }
   @include phones{
     width: 100%;
@@ -93,7 +99,7 @@
   justify-content: center;
   align-items: center;   
   flex-wrap: wrap;  
-  @include tablets{
+  @include desktop{
     justify-content: flex-start;
   }
 }
@@ -101,6 +107,10 @@
 .footer__info {
   margin-top: 70px;
   display: flex;
+
+  @include desktop{
+    flex-direction: column;
+  }
   
   @include tablets{
     flex-direction: column;
@@ -109,10 +119,46 @@
   
 }
 
+.nav__content-item {
+  display: flex;
+  align-items: center;
+  margin-right: 81px;
+  transition: .3s linear;
+  @include desktop{
+    margin-right: 33px;
+  }
+  &:not(:last-child){
+    @include desktop{
+      margin-bottom: 20px;
+    }
+
+    @include phones {
+      margin-right: 0;
+      flex-basis: 50%;
+    }
+    
+    /* @include tablets{
+      &:nth-child(4){
+        margin-right: 0;
+      }
+    } */
+  }
+  
+  &:last-child{
+    margin-right: 0;
+    @include desktop{
+      margin-bottom: 20px;
+    }
+  }
+  &:hover{
+    color:$orange;
+  }
+}
+
 .footer__info-block {
   width: 400px;
-  @include tablets{
-    width: 470px;
+  @include desktop{
+    
     margin-bottom: 30px;
   }
 }

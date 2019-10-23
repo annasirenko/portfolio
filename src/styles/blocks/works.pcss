@@ -17,9 +17,11 @@
   }
 }
 
-/* .works__content{
-  max-width: 953px;
-} */
+@include phones{
+  .works__content.container{
+    width: 100%;
+  }
+}
 
 .title-works{
   color: $dark;
@@ -39,7 +41,7 @@
 .works__section-body{
   display: flex;
   margin-top: 92px;
-  @include tablets{
+  @include desktop{
     flex-direction: column;
   }
   
@@ -54,11 +56,11 @@
   width: 100%;
   height: 550px;
   @include desktop{
-    height: 354px;
-  }
-  @include tablets{
     height: 46vw;
   }
+  /* @include tablets{
+    height: 46vw;
+  } */
   @include phones{
     height: 262px;
   }
@@ -74,6 +76,14 @@
     font-size: 22vw;
     font-weight: 900;
     line-height: 0.78;
+    @include desktop{
+    right: -22px;
+    bottom: 12rem;
+    font-size: 32vw;
+    }
+    @include phones{
+      display: none;
+    }
    
   }
 
@@ -120,6 +130,7 @@
   }
   &__current-image{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top center;
   }
@@ -212,7 +223,7 @@
 .works__desc-list{
   display: flex;
   margin-bottom: 50px;
-  @include tablets{
+  @include desktop{
     margin-bottom: 18px;
   }
   @include phones{
@@ -239,7 +250,7 @@
 .works__info{
   height: 240px;
   width: 250px;
-  @include tablets{
+  @include desktop{
     height: 192px;
   }
   &-title{
@@ -248,7 +259,7 @@
     font-weight: 700;
     color: $dark;
 
-    @include tablets{      
+    @include desktop{      
       text-align: center;
       width: 314px;
     
@@ -265,6 +276,10 @@
   &-text{
     color: $dark;
     line-height: 1.67;
+    @include desktop{
+      text-align: center;
+      width: 332px;
+    }
 
     @include tablets {
       font-size: 14px;
@@ -284,6 +299,9 @@
 &-content{
   display: flex;
   color: #586ed3;
+  @include desktop{
+    justify-content: center;
+  }
 
   @include tablets{
     font-size: 14px;
@@ -322,7 +340,7 @@
     padding: 0 30px;
   }
 
-  @include tablets{
+  @include desktop{
     align-self: center;
     
     margin-top: 60px;
