@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include phones{
+  @include tablets{
     flex-direction: column;
   }
 }
@@ -17,7 +17,7 @@
     padding: 205px 0;
 }
 @include tablets{
-  padding: 205px 32px;
+  padding: 6.8125rem 32px;
 }
 
 @include phones{
@@ -32,8 +32,9 @@
 }
 
 .about__main{
-  @include phones{
+  @include tablets{
     margin-bottom: 46px;
+    
   }
 }
 /* 
@@ -55,7 +56,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 105px;
-
+@include tablets{
+  margin-top: 4.5625rem;
+}
   @include phones{
     width: 100%;
     margin-top: 25px;
@@ -82,6 +85,11 @@
 .about__desc{
   /* text-align: left; */
   margin-left: 166px;
+  @include tablets{
+    margin: 0 auto;
+    max-width: 31.25rem;
+    text-align: center;
+  }
   @include phones{
     margin-left: 0;
   }
@@ -97,6 +105,9 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.88;
+  @include tablets{
+    width: 100%;
+  }
   
   
 }
@@ -128,7 +139,7 @@
   bottom: 50px;
 
   @include tablets{
-    bottom: 82px;
+    bottom: 4.125rem;
   }
   @include phones{
     display: none;

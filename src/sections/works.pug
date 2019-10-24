@@ -48,12 +48,12 @@
         :class="{ 'slider__buttons-button_disabled': isDisabledPrev }"
         @click="onPrevButtonClick"
     )
-        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-next')
+        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-prev')
       button.slider__buttons-button(
         :class="{ 'slider__buttons-button_disabled': isDisabledNext }"
         @click="onNextButtonClick"
     )
-        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-prev')
+        +icon('arrow-down', 'slider__buttons-icon slider__buttons-icon-next')
   
   script(type="text/x-template")#slider-info
     .works__slider-info

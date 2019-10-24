@@ -86,7 +86,7 @@
   @include tablets{
     align-self: center;
     max-width: 398px;
-    margin-left: 0;
+    margin: 0 auto;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
@@ -94,6 +94,7 @@
   }
   @include phones{
     width: 82%;
+    margin-left: 0;
     text-align: left;
     font-size: 24px;
   }
@@ -180,13 +181,13 @@
   &:first-child{
     margin-left: 0;
   }
-  @include tablets{
+  /* @include tablets{
     margin: 13px 25px;
     &:not(:last-child) {
       margin-right: 13px;
   }
-}
-  @include phones{
+} */
+  @include tablets{
     /* margin: 13px 10px;
     &:not(:last-child) {
       margin-right: 10px;

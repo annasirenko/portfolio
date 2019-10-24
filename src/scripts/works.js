@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import works from '../data/works';
-import constants from '../variables.json';
+import constants from '../styles/variables.json';
 
 
 const sliderThumbs = {
