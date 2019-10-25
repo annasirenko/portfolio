@@ -98,7 +98,7 @@
     
   }
 
-  &__thumbs{
+  &-thumbs{
     position: absolute;
     right: 10vw;
     bottom: 60px;
@@ -118,7 +118,7 @@
    
     
   }
-  &__buttons{
+  &-buttons{
     position: absolute;
     left: calc(100% - 10vw);
     bottom: 60px;
@@ -205,8 +205,15 @@
 .slider__thumbs-item{
   width: 25%;
   height: 100%;
+  flex-shrink: 0;
   position: relative;
   cursor: pointer;
+  @include desktopHd {
+    width: calc(100% / 3);
+  }
+  @include tablets {
+    width: 50%;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -362,5 +369,22 @@
     
     margin-top: 60px;
     padding: 0 30px;
+  }
+}
+
+.fade{
+  &-enter-active,
+  &-leave-active{
+    transition: opacity .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-enter,
+  &-leave-to{
+    opacity: 0;
   }
 }

@@ -15,7 +15,10 @@
 }
 
 .footer__container {
-  display: flex;  
+  display: flex; 
+  @include desktop{
+    justify-content: center;
+  } 
   @include phones{
     flex-direction: column;
   }

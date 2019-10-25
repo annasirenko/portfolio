@@ -17,14 +17,14 @@
       transition-group.works__slider__current(name="fade" tag="div")
         img.works__slider__current-image(:src="currentWork.photo" :key="currentWork.id")
         
-      .works__slider__thumbs
+      .works__slider-thumbs
         .slider__thumbs-list(:style="`transform: translateX(-${offset*100/maxThumbsCount}%)`")
           slider-thumbs(
             :works="works"
             :current-index="currentIndex"
             @change-slide="goToSlide"
       )
-      .works__slider__buttons
+      .works__slider-buttons
         slider-buttons(
           :is-disabled-prev="currentIndex === 0"
           :is-disabled-next="currentIndex === works.length - 1"
