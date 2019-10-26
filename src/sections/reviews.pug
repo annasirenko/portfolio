@@ -3,29 +3,28 @@
     h2.reviews__slider-title Что обо мне говорят
     .reviews__slider-scroll
       .button-block
-        button.slider-btn.slider-btn-prev
+        button.slider-btn.slider-btn-prev(
+          :disabled="currentIndex === 0"
+          @click="previous"
+        )
           +icon('arrow-down', 'slider-btn-icon slider-btn-icon-prev')                        
       .button-block
-        button.slider-btn.slider-btn-next
+        button.slider-btn.slider-btn-next(
+          :disabled="currentIndex === slidesLength - 1"
+          @click="next"
+        )
           +icon('arrow-down', 'slider-btn-icon slider-btn-icon-next')
   .reviews__slider-down
     .reviews__slider-desc
-        ul.reviews__slider-list
-          li.reviews__slider-item
-            blockquote.reviews__slider-info Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых надёжных испытаний и бессонных ночей!
+        flickity(ref="flickity" :options="flickityOptions")
+          li.reviews__slider-item.carousel-cell(v-for="review in reviews")
+            blockquote.reviews__slider-info {{review.text}}
             .reviews__slider-user
               .reviews__user-info
-                +image('content/k.jpg', 'reviews__slider-user-pic')
+                img.reviews__slider-user-pic(:src="review.photo")
+                  
               .reviews__slider-user-desc
                 .reviews__slider-user-info
-                  .reviews__username Дмитрий Ковальчук
-                  .reviews__profession Основатель Loftschool
-          li.reviews__slider-item
-            blockquote.reviews__slider-info Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-            .reviews__slider-user
-              .reviews__user-info
-                +image('content/s.jpg', 'reviews__slider-user-pic')
-              .reviews__slider-user-desc
-                .reviews__slider-user-info
-                  .reviews__username Владимир Сабанцев
-                  .reviews__profession Преподаватель
+                  .reviews__username {{review.author}}
+                  .reviews__profession {{review.position}}
+          

@@ -2,11 +2,26 @@
   padding: 180px 0px;
   width: 100%;
   background-color: white;
+
+  @include desktopHd{
+    padding: 130px 0;
+  }
+
+  @include desktop{
+    padding: 105px 0;
+  }
+
+  @include phones{
+    padding: 90px 0;
+
+  }
 }
 
-/* .works__content{
-  max-width: 953px;
-} */
+@include phones{
+  .works__content.container{
+    width: 100%;
+  }
+}
 
 .title-works{
   color: $dark;
@@ -14,11 +29,22 @@
   font-weight: 700;
   line-height: 48px;
   /* margin-top: 100px; */
+  @include desktop{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
-.works__section-body{
+.works__wrapper{
   display: flex;
   margin-top: 92px;
+  @include desktop{
+    flex-direction: column;
+  }
+  
 }
 
 .works__left{
@@ -28,7 +54,18 @@
 .works__slider{
   position: relative;
   width: 100%;
-  height: 30vw;
+  height: 550px;
+  @include desktop{
+    height: 46vw;
+  }
+  /* @include tablets{
+    height: 46vw;
+  } */
+  @include phones{
+    height: 262px;
+  }
+ 
+  
 
   &::after{
     content: attr(data-index);
@@ -39,6 +76,15 @@
     font-size: 22vw;
     font-weight: 900;
     line-height: 0.78;
+    @include desktop{
+    right: -22px;
+    bottom: 12rem;
+    font-size: 32vw;
+    }
+    @include phones{
+      display: none;
+    }
+   
   }
 
   &__current{
@@ -46,25 +92,53 @@
     width: calc(100% - 10vw);
     height: 100%;
     z-index: 1;
+    @include phones {
+      width: 100%;
+    }
+    
   }
 
-  &__thumbs{
+  &-thumbs{
     position: absolute;
     right: 10vw;
     bottom: 60px;
     z-index: 1;
     height: 100px;
+    overflow: hidden;
+    /* width: 712px; */
+    @include desktopHd{
+      width: 33.375rem;
+    bottom: 1.875rem;
+    }
+    @include phones{
+      display: none;
+    }
+
+   
+   
     
   }
-  &__buttons{
+  &-buttons{
     position: absolute;
     left: calc(100% - 10vw);
     bottom: 60px;
     z-index: 1;
+    @include desktopHd{
+      bottom: 1.875rem;
+    }
+    
+    @include phones{
+      left: auto;
+      right: 0;
+      bottom: 0;
+      
+    }
+   
     
   }
   &__current-image{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top center;
   }
@@ -79,13 +153,19 @@
     height: 50px;
     background-color: $dark;
     transition: .1s linear;
-    &:hover{
+    
+    &_disabled {
+      cursor: default;
+      .slider__buttons-icon {
+        fill-opacity: 0.3;
+      }
+    }
+    &:not(&_disabled):hover {
       background-color: $orange;
     }
+
+       
     
-    /* &:active{
-      border: 1px solid $orange;
-    } */
   }
   &-icon{
     width: 8px;
@@ -104,49 +184,60 @@
 
 
 .slider__thumbs{
-  position: relative;
-  width: 600px;
-  height: 100%;
-  flex-shrink: 0;
-  cursor: pointer;
-  display: flex;  
+  display: flex;
+  align-items: stretch;
+  height: 6.25rem;
+  &-list{
+    transition: transform .2s ease,-webkit-transform .2s ease;
+}  
     &-image{
     transition: .1s linear;
     object-fit: cover;
     object-position: top center;
     width: 100%;
     height: 100%;
-    &:hover{
-      border: 3px solid $orange;      
-    }
-   
+    
   }
 }
 
-.slider__thumbs-item:hover::after{
-  border: 3px solid $orange;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
-.slider__thumbs-item_active:hover::after{
-  border: 3px solid $orange;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
 .slider__thumbs-item{
   width: 25%;
   height: 100%;
+  flex-shrink: 0;
   position: relative;
+  cursor: pointer;
+  @include desktopHd {
+    width: calc(100% / 3);
+  }
+  @include tablets {
+    width: 50%;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+  }
+  &_active::after {
+    border: 3px solid $orange;
+  }
+  &:hover,
+  &_active {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &:hover::after {
+    background-color: rgba($orange, 0.3);
+  }
+  
   
 }
 
@@ -156,42 +247,94 @@
 .works__desc-list{
   display: flex;
   margin-bottom: 50px;
+  @include desktop{
+    margin-bottom: 18px;
+  }
+  @include phones{
+    justify-content: center;
+  }
 }
 
 .works__desc-item{
   margin-left: 20px;
-  &:first-child{
-    margin-left: 0;
-  }
-}
-
-.item-text{
   background-color: #f3f5f9;
   border-radius: 20px;
   /* width: 85px; */
   text-align: center;
   color: $dark;
   padding: 10px 20px;
+  &:first-child{
+    margin-left: 0;
+  }
 }
+
+
 
 .works__info{
   height: 240px;
   width: 250px;
+  @include desktop{
+    height: 192px;
+  }
   &-title{
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 700;
     color: $dark;
+
+    @include desktop{      
+      text-align: center;
+      width: 314px;
+    
+    }
+    @include phones{
+    font-size: 24px;
+    margin-top: 26px;
+    text-align: left;
+
+    
+    }
+   
   }
   &-text{
     color: $dark;
     line-height: 1.67;
+    @include desktop{
+      text-align: center;
+      width: 332px;
+    }
+
+    @include tablets {
+      font-size: 14px;
+      text-align: center;
+      width: 332px;
+    }
+    @include phones {
+      font-size: 14px;
+      text-align: left;
+      width: 332px;
+    }
   }
 }
 
-.works__link-content{
+.works__link{
+  
+&-content{
   display: flex;
   color: #586ed3;
+  margin-top: 40px;
+  @include desktop{
+    justify-content: center;
+  }
+
+  @include tablets{
+    font-size: 14px;
+    justify-content: center;
+  }
+  @include phones{
+    justify-content: flex-start;
+  }
+}
 }
 
 .link__text:after {    
@@ -214,4 +357,34 @@
   height: 17px;
   fill: #586ed3;
   margin-right: 20px;
+}
+
+.works__right{
+  @include phones{
+    padding: 0 30px;
+  }
+
+  @include desktop{
+    align-self: center;
+    
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+}
+
+.fade{
+  &-enter-active,
+  &-leave-active{
+    transition: opacity .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-enter,
+  &-leave-to{
+    opacity: 0;
+  }
 }

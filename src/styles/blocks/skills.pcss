@@ -2,6 +2,13 @@
   background: url('../images/content/фон2.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
+
+  @include phones {
+    padding: 95px 30px 260px;
+  }
+  @include tablets{
+    padding: 117px 0 44vw;
+  }
   
 }
 
@@ -13,6 +20,12 @@
   position: absolute;
   bottom:-54px;
   width: 400px;
+  @include desktop{
+    left: 50%;
+    bottom: 0;
+    width: 44vw;
+    transform: translate(-50%,10vw) rotate(-90deg);
+  }
 }
 
 .skills__section-columns{
@@ -21,15 +34,42 @@
   align-items: center;
   flex: 1;
   padding-top: 205px;
+  @include tablets{
+    padding-top: 119px;
+  }
+  @include phones{
+    padding-top: 0;
+  }
   
   /* margin-left: 288px;
   padding-top: 150px; */
+}
+
+
+  .skills__content{
+    @include desktop{
+    padding: 7.3125rem 0 44vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  @include tablets{
+    padding: 0;
+  }
 }
 
 .skills__about{
   margin-left: 34%;
   margin-bottom: 74px;
   /* padding-top: 44px; */
+  @include desktop{
+    margin-left: 0;
+  }
+  @include tablets{
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .skills__advantage{
@@ -38,6 +78,26 @@
   font-weight: bold;
   color: #fff;
   margin-bottom: 60px;
+  @include desktop{
+    text-align: center;
+  }
+
+  
+  @include tablets{
+    align-self: center;
+    max-width: 398px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  @include phones{
+    width: 82%;
+    margin-left: 0;
+    text-align: left;
+    font-size: 24px;
+  }
 }
 
 .skills__desc{
@@ -48,6 +108,30 @@
   /* margin-bottom: 96px; */
   width: 66%;
   line-height: 1.67;
+  @include desktop{
+    width: 100%;
+    text-align: center;
+    max-width: 27.5rem;
+  }
+  
+  @include tablets{
+    align-self: center;
+    max-width: 440px;
+    margin-left: 0;
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  @include phones{
+    width: 100%;
+    text-align: left;
+    
+  }
+
+  
 }
 
 .skills__workflow-name{
@@ -57,12 +141,38 @@
   color: #fff;
   /* /* margin-left: 130px; */
   margin-bottom: 14px; 
+  @include phones{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  @include tablets{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+  }
 
 }
 
 .skills__level{
   margin-left: 43%;
   padding-bottom: 160px;
+  @include desktop{
+    margin-left: 0;
+  }
+
+  @include tablets{
+    margin-left: 0;
+    padding-bottom: 0px;
+    padding-top: 60px;
+    
+  }
+  @include phones{
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-top: 60px;
+         
+    }
 }
 
 .skill__container{
@@ -71,9 +181,31 @@
   &:first-child{
     margin-left: 0;
   }
+  /* @include tablets{
+    margin: 13px 25px;
+    &:not(:last-child) {
+      margin-right: 13px;
+  }
+} */
+  @include tablets{
+    /* margin: 13px 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+} */
+    margin: 0;
+    &:not(:last-child){
+      margin-right: .625rem;
+    }
+    &:nth-child(2n+1){
+      justify-self: end;
+    }
+    &:nth-child(2n){
+      justify-self: start;
+    }
+
+}
 }
 
-.skills__frontend{
-  padding-bottom: 50px;
-  
+.skills__item:not(:last-child) {
+  margin-bottom: 50px;
 }

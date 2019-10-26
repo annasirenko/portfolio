@@ -5,12 +5,33 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatib0.le", content="ie=edge")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon" href=require("./images/content/favicon.ico") type="image/x-icon")
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        .double-content
+        .parallax-container
+          .parallax-section
+            .parallax-section__layer(data-speed="0.16")
+              +image('content/sky.jpg', 'parallax-section__image')
+            .parallax-section__layer(data-speed="0.2")
+              +image('content/mountains.png', 'parallax-section__image')
+            .parallax-section__layer.parallax-title(data-speed="0.3")
+              h1.main-title Анна #[br] Сиренко
+            .parallax-section__layer.parallax-subtitle(data-speed="0.3")
+              h1.main-subtitle Личный сайт #[br] веб разработчика
+            .parallax-section__layer(data-speed="0.4")
+              +image('content/train.png', 'parallax-section__image')
+            .parallax-section__layer(data-speed="0.6")
+              +image('content/grasss.png', 'parallax-section__image')
+            .parallax-section__layer.parallax-section__layer_first-gradient(data-speed="0.6")
+              +image('content/bg1.png', 'parallax-section__image')
+              
+            .parallax-section__layer.parallax-section__layer_second-gradient(data-speed="0.6")
+              +image('content/bg2.png', 'parallax-section__image')
+              
+          
           section#main.main.section
             .main__content.container
               include ./sections/header
@@ -19,7 +40,7 @@ html(lang="en")
           section#about.about
             .about__container.container
               include ./sections/about
-              
+                
         section#skills.skills
           +image('content/Руки.png', 'hands-pic')
           .skills__content.container
@@ -48,13 +69,14 @@ html(lang="en")
         footer.footer
           .footer__container.container
             include ./sections/footer
-            
-        //- +icon('link', 'link-class')
-        //- .icon-bg
         
-          section.main
+    
+      //- +icon('link', 'link-class')
+      //- .icon-bg
+      
+        section.main
 
-            include ./sections/header
-           
-              
+          include ./sections/header
+          
+            
         

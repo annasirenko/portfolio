@@ -1,5 +1,17 @@
 .skill__percentage{
   display:flex;
+  flex-wrap: wrap;
+    
+  @include tablets{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    
+  }
+
+  @include tablets{
+    justify-content: center;
+  }
   
   
 }
@@ -24,8 +36,7 @@
   stroke-width: 9px;
   stroke-dasharray: 251;
   stroke-dashoffset: 251;
-  animation: fill 100s linear infinite;
-  animation-play-state: paused;
+  transition: stroke-dashoffset 1s ease .2s;
 }
 
 @keyframes fill {

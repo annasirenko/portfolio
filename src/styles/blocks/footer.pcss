@@ -3,12 +3,33 @@
   background-color: #222427;
   color: white;
   padding: 86px 0px 0px 0px;
+  @include desktop{
+    padding: 86px 0px 86px;
+    height: 100%;
+
+  }
+  @include tablets{
+    padding: 65px 32px 60px;
+    height: 100%;
+  }
 }
 
 .footer__container {
-  display: flex;  
+  display: flex; 
+  @include desktop{
+    justify-content: center;
+  } 
+  @include phones{
+    flex-direction: column;
+  }
 }
 
+.footer__left{
+  display: flex;
+  @include desktop{
+    flex-direction: column;
+  }
+}
 .footer__copyright {
   color: #47484a;
   font-weight: 600;
@@ -19,6 +40,13 @@
 .footer__name {
   width: 134px;
   margin-left: 63px;
+  @include phones{
+    width: 100%;
+    margin-left: 0;
+  }
+  @include desktop{
+    margin-left: 0;
+  }
 }
 
 .footer__title-name {
@@ -27,6 +55,11 @@
   font-size: 18px;
   margin-bottom: 35px;
   text-transform: uppercase;
+  @include phones{
+    margin-bottom: 3px;
+    margin-top: 10px;
+  }
+  
 }
 
 .footer__text{
@@ -34,19 +67,113 @@
   color: rgba(#fff, 0.3);
   font-size: 16px;
   line-height: 1.67;
+  @include phones{
+    margin-top: 20px;
+    width: 70%;
+  }
 }
 
 .footer__content {
-  margin-left: 142px;
+  margin-left: 94px;
+  @include tablets{
+    margin-left: 2.875rem;
+  }
+  @include phones{
+    margin-left: 0;
+  }
+  /* @include tablets{
+    margin-left: 40px;
+  } */
+}
+
+.nav__footer{
+  @include desktop{
+    width: 450px;
+    
+  }
+
+  @include tablets{
+    width: 22.125rem;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
+
+.nav__content {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  flex-wrap: wrap;  
+  @include desktop{
+    justify-content: flex-start;
+  }
 }
 
 .footer__info {
   margin-top: 70px;
-  display: flex
+  display: flex;
+
+  @include desktop{
+    flex-direction: column;
+  }
+  
+  @include tablets{
+    flex-direction: column;
+    margin-top: 38px;
+  }
+  
+}
+
+.nav__content-item {
+  display: flex;
+  align-items: center;
+  margin-right: 81px;
+  transition: .3s linear;
+  @include desktop{
+    margin-right: 33px;
+  }
+  &:not(:last-child){
+    @include desktop{
+      margin-bottom: 20px;
+    }
+
+    @include phones {
+      margin-right: 0;
+      flex-basis: 50%;
+    }
+    
+    /* @include tablets{
+      &:nth-child(4){
+        margin-right: 0;
+      }
+    } */
+  }
+  
+  &:last-child{
+    margin-right: 0;
+    @include desktop{
+      margin-bottom: 20px;
+    }
+  }
+  &:hover{
+    color:$orange;
+  }
 }
 
 .footer__info-block {
   width: 400px;
+  @include desktop{
+    
+    margin-bottom: 30px;
+  }
+  @include tablets{
+    width: 18rem;
+  }
 }
 
 .footer__autor {
@@ -77,6 +204,9 @@
   transition: .3s linear;
   &:hover{
     border-color: $orange;
+    .socials__icon{
+      fill: $orange;
+    }
   }
   
   }

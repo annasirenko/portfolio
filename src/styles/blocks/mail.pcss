@@ -4,8 +4,19 @@
   /* max-width: 953px; */
 }
 .mail__container{
-  margin-left: 100px;
+  
   padding-bottom: 50px;
+  @include tablets{
+  margin-left: 0;
+  padding-bottom: 0;
+
+  }
+}
+
+@include phones{
+  .mail__container.container{
+    width: 100%;
+  }
 }
 .mail__content-title{
   color: #ffff;
@@ -13,6 +24,18 @@
   font-size: 36px;
   margin-bottom: 98px;
   padding-top: 118px;
+  @include desktop{
+    font-size: 1.875rem;
+  }
+  @include tablets{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  @include phones{
+    font-size: 24px;
+  }
+ 
 }
 
 .mail__form{
@@ -26,14 +49,23 @@
   &:last-child {
     margin-bottom: 0px;
   }
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .form__block {
   flex: 1;
   margin-right: 20px;
+  @include phones{
+    margin-bottom: 20px;
+  }
 
   &:last-child {
     margin-right: 0px;
+    @include phones{
+      margin-bottom: 0;
+    }
   }
   display: block;
 
@@ -51,6 +83,7 @@
 }
 
 .form__input{
+  position: relative;
   background: none;
   border: transparent;
   border-bottom: 1px solid white;
@@ -88,6 +121,11 @@
     resize: none;
     /* height: 110px; */
     transition:all .1s ease;
+    @include phones{
+      height: 110px;
+      line-height: 1.8;
+
+    }
     /* &:focus {
       outline: none;
     }
@@ -106,6 +144,14 @@
 
 .form__btn{
   padding-bottom: 166px;
+  @include phones{
+    padding-bottom: 0;
+    text-align: center;
+  }
+  @include tablets{
+    justify-content: center;
+    padding-bottom: 22px;
+  }
 }
 .btn {
   width: 348px;
@@ -116,9 +162,18 @@
   font-size: 18px;
   text-transform: uppercase;
   transition: .3s linear;
+  @include phones{
+    width: 260px;
+  }
   
   &:hover {
       background: linear-gradient(to right, #d0731b, #ff9d00);        
+  }
+}
+
+.form__row-btn{
+  @include tablets{
+    justify-content: center;
   }
 }
 

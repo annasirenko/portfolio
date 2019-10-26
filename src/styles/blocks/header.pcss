@@ -14,7 +14,11 @@
 
 }
 
-
+.nav__header{
+  @include tablets{
+  display: none;
+}
+}
 .nav__list {
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Open Sans', Helvetica, sans-serif;
@@ -22,7 +26,8 @@
   font-weight: normal;
   display: flex;
   justify-content: center;
-  align-items: center;     
+  align-items: center;   
+  flex-wrap: wrap;  
 }
 
 .nav__link{
@@ -50,10 +55,33 @@
 .nav__item {
   display: flex;
   align-items: center;
-  margin-right: 81px;
+  margin-right: 4vw;
   transition: .3s linear;
+  @include tablets{
+    margin-right: 33px;
+  }
+  &:not(:last-child){
+    @include tablets{
+      margin-bottom: 20px;
+    }
+
+    @include phones {
+      margin-right: 0;
+      flex-basis: 50%;
+    }
+    
+    /* @include tablets{
+      &:nth-child(4){
+        margin-right: 0;
+      }
+    } */
+  }
+  
   &:last-child{
     margin-right: 0;
+    @include tablets{
+      margin-bottom: 20px;
+    }
   }
   &:hover{
     color:$orange;
@@ -63,7 +91,7 @@
 
 .socials{
   display: flex;
-  justify-content: flex-end;
+  
   
 }
 
@@ -87,4 +115,14 @@
   }
 }
 
-
+.socials__header{
+  @include tablets{
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 9.375rem;
+  }
+  @include phones{
+    display: none;
+  }
+}

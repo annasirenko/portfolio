@@ -7,6 +7,7 @@
 .double-content{
   background: url('../images/content/фон1.jpg') no-repeat center center;
   background-size: cover;
+  
 }
 
 .main__content{
@@ -39,13 +40,25 @@
 }
 
 
-h1{
+.main-title{
   margin-top: 69px;
   font-family: Open Sans,Helvetica,sans-serif;
   font-size: 72px;
   font-weight: 800;
   color: #fff;
   line-height: 0.83;
+  @include phones{
+    font-size: 56px;
+  }
+}
+
+.main-subtitle{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.875rem;
+  
+    
 }
 
 .main__scroll{
@@ -53,6 +66,9 @@ h1{
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  @include tablets{
+    display: none;
+  }
 
 &-content{
   display: flex;

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "1 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "1.jpg",
+    "link": "//google.com",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 2,
+    "title": "2 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "2.jpg",
+    "link": "//yandex.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 3,
+    "title": "3 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "3.jpg",
+    "link": "//rambler.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 4,
+    "title": "4 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "5.jpg",
+    "link": "//yandex.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 5,
+    "title": "5 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "2.jpg",
+    "link": "//rambler.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 6,
+    "title": "6 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "3.jpg",
+    "link": "//rambler.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 7,
+    "title": "7 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "1.jpg",
+    "link": "//google.com",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 8,
+    "title": "8 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "3.jpg",
+    "link": "//rambler.ru",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  },
+  {
+    "id": 9,
+    "title": "9 Сайт школы онлайн образования",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "photo": "1.jpg",
+    "link": "//google.com",
+    "desc": "Этот сайт сделан в рамках обучения в Школе онлайн-образования LoftSchool."
+  }
+]
