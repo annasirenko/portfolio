@@ -1,19 +1,46 @@
-.mail__form
-  form.form
-    .form__row
-      .form__block
-        label(for="name").form__block-title Введите ваше имя
-        input.form__input.nameuser(type='text' name='name' id="name" required='' placeholder="Ковальчук Дмитрий")
-        .form__input-error
-      .form__block
-        label(for="email").form__block-title Введите ваш email
-        input.form__input.email(type='email' name='email' id="email" required='' placeholder="loftschool@study.com")
-        .form__input-error
-    .form__row
-      .form__block.form__block-comments
-        label(for="comment").form__block-title Сообщение к письму
-        textarea.form__input.form__input-textarea.comments(name='comment' required='' id="comment" placeholder="Требуется Ваша помощь при создании сайта. Интересуют сроки и цена вопроса")
-        .form__input-error
-    .form__row.form__row-btn
-      .form__btn                          
-        button#order.btn(type='submit') Отправить
+script(type="text/x-template")#feedback-form
+  .mail__content(@submit="onFormSumbit")
+    h2.mail__content-title Связаться со мной
+    .mail__form
+      form.form
+        .form__row
+          .form__block
+            basic-input(
+              v-model="name"
+              :required="false"
+              :error-message="errors.name"
+              label="Введите ваше имя"
+              type="text"
+              name="name"
+              icon="user"
+              theme="light"
+        )
+          .form__block
+            basic-input(
+              v-model="email"
+              :required="false"
+              :error-message="errors.email"
+              label="Введите ваш email"
+              type="email"
+              name="mail"
+              icon="envelope"
+              theme="light"
+        )
+        .form__row
+          .form__block.form__block-comments
+            basic-textarea(
+              v-model="message"
+              :required="false"
+              :error-message="errors.message"
+              label="Сообщение к письму"
+              name="message"
+              icon="message"
+              theme="light"
+      )
+        .form__row.form__row-btn
+          .form__btn                          
+            basic-button(type='submit') Отправить
+          alert-modal(
+            v-if="isShowAlert"
+            @close="hideModal"
+          ) Письмо отправлено

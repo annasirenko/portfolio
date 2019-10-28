@@ -1,0 +1,143 @@
+.section--skills {
+  display: grid; 
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  @include phones {
+    grid-template-columns: 1fr
+  } 
+}
+
+.skills-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "name"
+  "old1"
+  "old2"
+  "old3"
+  "new"
+  }
+
+  .section-block {
+  background: #fff;
+  padding: 25px; 
+  margin: 10px;
+  box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+  @include phones {
+    margin: 10px 0px; 
+    padding: 10px
+  }
+}
+
+.skills-form {
+  padding: 15px 0;
+   
+   display: flex; 
+   justify-content: space-between;
+    align-items: center;
+    &:first-child{
+      border-bottom: 1px solid #dedee0; 
+    }
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+
+.skill-form--name {
+  grid-area: name; 
+  align-items: center;
+   color: #4e586d;
+    font-size: 18px; 
+    font-weight: 700
+  }
+
+  
+.skill-name {
+  width: 60%; 
+  border-bottom: 1px solid transparent; 
+  margin-left: 10px;
+  font-size: 18px;
+}
+.skill-name--editing {
+  width: 60%; 
+  border-bottom: 1px solid #000;
+   margin-left: 10px;
+   font-size: 18px;
+   &-title{
+     font-weight: 700;
+     width: 60%; 
+  border-bottom: 1px solid #000;
+   margin-left: 10px;
+   font-size: 18px;
+   }
+  }
+  .skill-name--edited{
+    width: 60%; 
+  border-bottom: 1px solid transparent;
+   margin-left: 10px;
+   &:focus{
+    border-bottom: 1px solid transparent;
+   }
+  }
+
+
+  
+
+  .skills-form--newskill{
+    grid-area: new; 
+    justify-content: flex-end
+  }
+
+  .new-skill{
+    width: 40%; 
+    border-bottom: 1px solid #000; 
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .skill-value {
+    width: 20%;
+     border-bottom: 1px solid #000;
+     margin-left: 10px;
+     font-size: 16px;
+    }
+
+    /* .form__skills{
+      &:after{
+        content: "%";
+    display: inline-block;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+      }
+    } */
+    .skills__percent{
+      position: relative;
+      &-measure{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+.old-skill {
+  margin-left: 15px;
+  font-size:18px;
+  width: 50%;
+  color: #414c63;
+  @include tablets{
+    width: 30%;
+  }
+}
+  
+.skill-value--edited {
+  border-bottom: 1px solid transparent;
+   font-size: 18px;
+    text-align: center
+  }
+
+
+
+
+

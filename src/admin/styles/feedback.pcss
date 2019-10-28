@@ -1,0 +1,148 @@
+.edit-card--feedback {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  
+  grid-template-areas:
+      "name name"
+      "download content"
+      "link content";
+  
+  @include tablets {
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+  "name name"
+  "download content"
+  ". content"
+}
+  @include phones {
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+   "name"
+  "download"
+  "content"}
+}
+
+.edit-card__download-area--feedback {
+  border: none; 
+  background: inherit; 
+  padding: 10px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  align-self: center;
+  background: #dee4ed; 
+  left: 0;
+  border: #a1a1a1 1px dashed;
+  padding: 100px 50px; 
+  text-align: center;
+  grid-area: download;
+  /* width: 100%;  */
+  justify-self: center;
+}
+
+.userpic-bg {
+  cursor: pointer;
+  background: #dee4ed;
+  height: 200px; 
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userpic-svg {
+height: 100px;
+width: 100px;
+fill: #fff;
+top: 20px;
+}
+
+
+
+
+.edit-card__row {
+  display: flex; 
+  width: 100%; 
+  justify-content: space-between;
+  @include tablets {
+    flex-direction: column
+  }
+}
+
+.edit-card__label--feedback {
+width: 48%;
+ @include tablets {
+   width: 100%
+  }
+}
+
+.edit-card__input--feedback {
+  padding-left: 0
+}
+.edit-card__textarea--feedback {
+  margin-left: 0;
+   margin-right: 0;
+  }
+
+
+.edited-card--feedback {
+  padding: 15px;
+}
+
+.edited-card__speaker-info {
+  display: flex; 
+  padding-bottom: 15px; 
+  border-bottom: 1px solid #b9bdc5;
+   align-items: center; 
+   justify-content: flex-start;
+   margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .edited-card__speaker-picture-box {
+    border-radius: 50%;
+    overflow: hidden; 
+    height: 50px;
+    width: 50px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .edited-card__speaker-picture {
+    position: absolute;
+    top: 0;
+    max-width: 200%;
+    max-height: 200%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .edited-card__speaker-textinfo {
+    margin-left: 20px;
+  }
+
+  .edited-card__speaker-name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .edited-card__description--feedback {
+    padding: 0;
+  }
+
+  .edited-card__speaker-position{    
+opacity: 0.5;
+color: $dark;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+  }
