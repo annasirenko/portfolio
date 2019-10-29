@@ -83,7 +83,7 @@
                   label(data-text="Ссылка").edit-card__label 
                     input(required placeholder = "" value = "https://www.porsche-pulkovo.ru").edit-card__input
                   label(data-text="Описание").edit-card__label 
-                    textarea( rows="5" required placeholder = "" value = "Порше Центр Пулково - является официальным дилером марки Порше в Санкт-Петербурге и предоставляет полный цикл услуг по продаже и сервисному обслуживанию автомобилей").edit-card__textarea
+                    textarea( rows="5" required placeholder = "" ).edit-card__textarea Порше Центр Пулково - является официальным дилером марки Порше в Санкт-Петербурге и предоставляет полный цикл услуг по продаже и сервисному обслуживанию автомобилей
                   label(data-text="Добавление тега").edit-card__label 
                     input(required placeholder = "" value = "HTML").edit-card__input
                   ul.edit-card__taglist
@@ -218,7 +218,7 @@
                     label(data-text="Титул").edit-card__label.edit-card__label--feedback 
                       input(required placeholder ="" value = "Основатель LoftSchool").edit-card__input.edit-card__input--feedback
                   label(data-text="Отзыв").edit-card__label
-                    textarea( rows="5" required placeholder = "" value = "Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!").edit-card__textarea.edit-card__textarea--feedback
+                    textarea( rows="5" required placeholder = "" ).edit-card__textarea.edit-card__textarea--feedback Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 
                   .edit-card__buttons
                     button(type = "reset").edit-card__reset Отмена
