@@ -1,6 +1,6 @@
 .edit-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 500px 1fr;
   grid-template-rows: 0.5fr 3fr 2fr;
    grid-template-areas: 
    "name name"
@@ -10,10 +10,14 @@
   @include tablets {
   padding: 0 6.875rem;
   grid-template-columns: 1fr; 
+  grid-template-rows: auto auto 2fr;
   grid-template-areas: 
   "name"
   "download"
   "content"
+}
+@include phones{
+  padding: 0 0.875rem;
 }
 }
 
@@ -35,7 +39,7 @@ line-height: 34px;
   padding: 100px 50px; 
   text-align: center;
   grid-area: download;
-  width: 70%; 
+  width: 100%; 
   justify-self: center;
 }
 
@@ -58,6 +62,7 @@ line-height: 34px;
     font-weight: 600;
     @include tablets{
       width: 92%;
+      padding-top: 40px;
     }
   }
 
@@ -74,6 +79,7 @@ line-height: 34px;
       font-weight: 600;
       opacity: 0.5;
       color: #414c63;
+      margin-bottom: 10px;
   }
    
   }
@@ -81,13 +87,9 @@ line-height: 34px;
   padding: 10px;
   border-bottom: 1px solid #414c63;
   font-size: 16px;
-  color: #414c63;
+  color: #414c63;  
+    font-weight: 600;  
   
-  &::placeholder{
-    font-size: 16px;
-    color: #414c63;
-    
-  }
 
 }
 
@@ -110,7 +112,7 @@ line-height: 34px;
 .edit-card__tag {
   margin-right: 10px;
   background: #f4f4f4;
-  padding: 5px 15px;
+  padding: 10px 15px;
   border-radius: 30px;
   display: flex; 
   align-items: center
@@ -160,15 +162,23 @@ line-height: 34px;
   max-width: 100%
 }
 .edited-card__description{
-  padding: 25px 15px;
+  padding: 2.5625rem 1.9375rem;
+  
 }
 .edited-card__buttons {
   width: 100%; 
   display: flex; 
   justify-content: space-between; 
   color: #a0a5b1;
-   margin-top: 20px;
-  }
+   margin-top: auto;
+   margin-bottom: 0;
+   margin-top: 30px;
+   /* padding: 2.5625rem 1.9375rem; */
+}
+
+
+
+  
   .edited-card__name {
     font-weight: 700;
     font-size: 20px;
@@ -176,17 +186,25 @@ line-height: 34px;
   }
 
   .edited-card__text {
-    color: #7a8191;
+    color: #414c63;
+    font-weight: 600;
     margin-top: 20px;
     line-height: 30px;
+    font-size: 16px;
+    margin-bottom: 10px;
     }
 
 .edited-card__link {
   color: #4548d2;
    margin-top: 20px;
+   font-size: 16px;
 }
 
-
+.edit-card__textarea{
+  font-size: 16px;
+  font-weight: 600;
+  color: #414c63;
+}
 
 
 

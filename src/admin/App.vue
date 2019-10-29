@@ -28,108 +28,46 @@
                 .basic-button__text Добавить группу
           .about-page__content
             section.section--skills
-              .skills-card.section-block 
-                form.skills-form.skill-form--name 
-                  input( required placeholder="Название новой группы").skill-name.skill-name--editing
-                  .form-yesno-buttons
-                    button(type="submit").button.button--green 
-                    button(type="reset").button.button--cross 
+              -
+                var skillGroups = [
+                  { title: '', skills: [] },
+                  { title: 'Workflow', skills: [['Git', 50], ['Terminal', 30], ['Gulp', 40], ['Webpack', 50] ]},
+                  { title: 'Frontend', skills: [['HTML', 50], ['CSS', 30], ['', 40, 'edit'], ['jQuery и Vue.js', 50] ]},
+                ];
+              each skillGroup in skillGroups            
+                .skills-card.section-block 
+                    form.skills-card__header.skills-form.skill-form--name 
+                      input( required placeholder="Название новой группы" value=skillGroup.title).skill-name.skill-name--editing-title
 
-                form.skills-form.skills-form--newskill  
-                  input(required placeholder="Новый навык").new-skill
-                  input(required type="number" placeholder="100%").skill-value
-                  button(type="submit").basic-button_flat.basic-button_circle.basic-button_primary
-                    .basic-button__icon-wrapper
-                      icon.basic-button__icon(name="plus") 
-              .skills-card.section-block 
-                  form.skills-form.skill-form--name 
-                    input( required placeholder="Название новой группы" value="Workflow").skill-name.skill-name--editing-title
-                    
-                    .form-yesno-buttons
-                      button(type="submit").button.button--green 
-                      button(type="reset").button.button--cross 
-                      
-                  form.skills-form.skills-form--oldskill 
-                
-                    input(required placeholder="Навык" value="Git" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="50%" readonly).skill-value.skill-value--edited.skill-name--editing
-                      
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык" value="Terminal" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="30%" readonly).skill-value.skill-value--edited.skill-name--editing
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык" value="Gulp" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="40%" readonly).skill-value.skill-value--edited.skill-name--editing
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete    
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык" value="Webpack" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="50%" readonly).skill-value.skill-value--edited.skill-name--editing
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete  
+                      .form-yesno-buttons
+                        button(type="submit").button.button--green 
+                        button(type="reset").button.button--cross 
+                    .skills-card__skills                       
+                        each skill in skillGroup.skills 
+                          form.skills-form.skills-form--oldskill  
+                            if skill[2]
+                              input(required placeholder="Навык" value=skill[0] ).skill-name--editing.old-skill
+                              input(required type="number" placeholder=`${skill[1]}%` ).skill-value.skill-value--editing
+                            else                       
+                              input(required placeholder="Навык" value=skill[0] readonly).skill-name--edited.old-skill
+                              input(required type="number" placeholder=`${skill[1]}%` readonly).skill-value.skill-value--edited
+                            if skill[2]
+                              .form-yesno-buttons
+                                button(type="submit").button.button--green 
+                                button(type="reset").button.button--cross 
+                            else
+                              .form-yesno-buttons
+                                button(type="submit").button.button--edit
+                                button(type="button").button.button--delete
+               
 
-                  form.skills-form.skills-form--newskill  
-                    input(required placeholder="Новый навык").new-skill
-                    input(required type="number" placeholder="100%").skill-value
-                    button(type="submit").basic-button_flat.basic-button_circle.basic-button_primary
-                      .basic-button__icon-wrapper
-                        icon.basic-button__icon(name="plus") 
-              .skills-card.section-block 
-                  form.skills-form.skill-form--name 
-                    input( required placeholder="Название новой группы" value="Frontend").skill-name.skill-name--editing-title
-                    
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      
-                  form.skills-form.skills-form--oldskill 
-                
-                    input(required placeholder="Навык" value="HTML5" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="60%" readonly).skill-value.skill-value--edited.skill-name--editing
-                      
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык").skill-name--editing.old-skill
-                    .skills__percent
-                      input(required type="number" placeholder="50" ).skill-value.skill-value--editing.skill-name--editing
-                      .skills__percent-measure %
-                    .form-yesno-buttons
-                      button(type="submit").button.button--green 
-                      button(type="reset").button.button--cross 
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык" value="JavaScript" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="30%" readonly).skill-value.skill-value--edited.skill-name--editing
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete    
-                  form.skills-form.skills-form--oldskill
-                
-                    input(required placeholder="Навык" value="jQuery и Vue.js" readonly).skill-name--edited.old-skill
-                    input(required type="number" placeholder="30%" readonly).skill-value.skill-value--edited.skill-name--editing
-                    .form-yesno-buttons
-                      button(type="submit").button.button--edit
-                      button(type="button").button.button--delete  
-
-                  form.skills-form.skills-form--newskill  
-                    input(required placeholder="Новый навык").new-skill
-                    input(required type="number" placeholder="100%").skill-value
-                    button(type="submit").basic-button_flat.basic-button_circle.basic-button_primary
-                      .basic-button__icon-wrapper
-                        icon.basic-button__icon(name="plus")  
+                    form.skills-card__new-skill.skills-form--newskill.skills-form  
+                      input(required placeholder="Новый навык").new-skill
+                      input(required type="number" placeholder="100%").skill-value--new
+                      button(type="submit").basic-button_flat.basic-button_circle.basic-button_primary
+                        .basic-button__icon-wrapper
+                          icon.basic-button__icon(name="plus")  
+        .works-page
           .works-page__content    
             section.section--works
               form.section-block.edit-card.edit-card--works
@@ -141,13 +79,13 @@
                     .button.button--submit загрузить
                 .edit-card__content
                   label(data-text="Название").edit-card__label 
-                    input( required placeholder = "Сайт для авто салона Porsche").edit-card__input
+                    input( required placeholder = "" value = "Сайт для авто салона Porsche").edit-card__input
                   label(data-text="Ссылка").edit-card__label 
-                    input(required placeholder = "https://www.porsche-pulkovo.ru").edit-card__input
+                    input(required placeholder = "" value = "https://www.porsche-pulkovo.ru").edit-card__input
                   label(data-text="Описание").edit-card__label 
-                    textarea( rows="5" required placeholder="Порше Центр Пулково - является официальным дилером марки Порше в Санкт-Петербурге и предоставляет полный цикл услуг по продаже и сервисному обслуживанию автомобилей").edit-card__textarea
+                    textarea( rows="5" required placeholder = "" value = "Порше Центр Пулково - является официальным дилером марки Порше в Санкт-Петербурге и предоставляет полный цикл услуг по продаже и сервисному обслуживанию автомобилей").edit-card__textarea
                   label(data-text="Добавление тега").edit-card__label 
-                    input(required placeholder = "HTML").edit-card__input
+                    input(required placeholder = "" value = "HTML").edit-card__input
                   ul.edit-card__taglist
                     li.edit-card__tag
                       p.edit-card__description HTML
@@ -177,7 +115,7 @@
                         
                       li.edit-card__tag
                         p.edit-card__description Javascript
-                       
+                      
                   .edited-card__description
                     .edited-card__name Сайт школы образования
                     .edited-card__text Сайт сделан в рамках обучения
@@ -261,25 +199,26 @@
                     .edited-card__buttons
                       button(type="button").button.button--edit-edited Править
                       button(type="button").button.button--delete-edited Удалить
+        .feedback-page
           .feedback-page__content
             section.section--feedback
               form.section-block.edit-card--feedback
                 h2.edit-card__name Добавить отзыв
                 .edit-card__download-area--feedback
                   input.inputfile(type="file" required name="file" id="userpic") 
-                  label.inputfile__label(for="userpic")
-                    .userpic-bg
+                  label.feedback-upload(for="userpic")
+                    .feedback-upload__photo
                       icon.userpic-svg(name="user")
                   
-                    .button.button--link Добавить  фото
+                    .feedback-upload__button.button.button--link Добавить  фото
                 .edit-card__content
                   .edit-card__row
                     label(data-text="Имя автора").edit-card__label.edit-card__label--feedback 
-                      input( required placeholder = "Ковальчук Дмитрий").edit-card__input.edit-card__input--feedback
+                      input( required placeholder = "" value = "Ковальчук Дмитрий").edit-card__input.edit-card__input--feedback
                     label(data-text="Титул").edit-card__label.edit-card__label--feedback 
-                      input(required placeholder = "Основатель LoftSchool").edit-card__input.edit-card__input--feedback
+                      input(required placeholder ="" value = "Основатель LoftSchool").edit-card__input.edit-card__input--feedback
                   label(data-text="Отзыв").edit-card__label
-                    textarea( rows="5" required placeholder="Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!").edit-card__textarea.edit-card__textarea--feedback
+                    textarea( rows="5" required placeholder = "" value = "Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!").edit-card__textarea.edit-card__textarea--feedback
                 
                   .edit-card__buttons
                     button(type = "reset").edit-card__reset Отмена
@@ -298,13 +237,13 @@
                       p.edited-card__speaker-position Преподаватель
                   
                 
-                  .edited-card__description.edited-card__description--feedback
+                  .edited-card__description--feedback
                   
                     .edited-card__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
                   
-                    .edited-card__buttons
-                      button(type="button").button.button--edit-edited Править
-                      button(type="button").button.button--delete-edited Удалить
+                  .edited-card__buttons--feedback
+                    button(type="button").button.button--edit-edited Править
+                    button(type="button").button.button--delete-edited Удалить
                 .section-block.edited-card.edited-card--feedback
                   .edited-card__speaker-info
                     .edited-card__speaker-picture-box
@@ -314,13 +253,13 @@
                       p.edited-card__speaker-position Основатель Loftschool
                   
                 
-                  .edited-card__description.edited-card__description--feedback
+                  .edited-card__description--feedback
                   
                     .edited-card__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                   
-                    .edited-card__buttons
-                      button(type="button").button.button--edit-edited Править
-                      button(type="button").button.button--delete-edited Удалить
+                  .edited-card__buttons--feedback
+                    button(type="button").button.button--edit-edited Править
+                    button(type="button").button.button--delete-edited Удалить
                 .section-block.edited-card.edited-card--feedback
                   .edited-card__speaker-info
                     .edited-card__speaker-picture-box
@@ -330,12 +269,12 @@
                       p.edited-card__speaker-position Преподаватель
                   
                 
-                  .edited-card__description.edited-card__description--feedback
+                  .edited-card__description--feedback
                   
                     .edited-card__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                    .edited-card__buttons
-                      button(type="button").button.button--edit-edited Править
-                      button(type="button").button.button--delete-edited Удалить
+                  .edited-card__buttons--feedback
+                    button(type="button").button.button--edit-edited Править
+                    button(type="button").button.button--delete-edited Удалить
 
                 .section-block.edited-card.edited-card--feedback
                   .edited-card__speaker-info
@@ -346,13 +285,13 @@
                       p.edited-card__speaker-position Основатель Loftschool
                   
                 
-                  .edited-card__description.edited-card__description--feedback
+                  .edited-card__description--feedback
                   
                     .edited-card__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                   
-                    .edited-card__buttons
-                      button(type="button").button.button--edit-edited Править
-                      button(type="button").button.button--delete-edited Удалить
+                  .edited-card__buttons--feedback
+                    button(type="button").button.button--edit-edited Править
+                    button(type="button").button.button--delete-edited Удалить
 
 
 

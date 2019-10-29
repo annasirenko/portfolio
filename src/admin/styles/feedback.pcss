@@ -23,25 +23,27 @@
 }
 
 .edit-card__download-area--feedback {
-  border: none; 
-  background: inherit; 
-  padding: 10px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  align-self: center;
-  background: #dee4ed; 
-  left: 0;
-  border: #a1a1a1 1px dashed;
-  padding: 100px 50px; 
-  text-align: center;
-  grid-area: download;
-  /* width: 100%;  */
+  padding: 10px;   
   justify-self: center;
+}
+
+.feedback-upload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: #dee4ed; 
+    padding: 100px 50px; 
+    text-align: center;
+    border-radius: 50%;
+
+  }
 }
 
 .userpic-bg {
@@ -93,6 +95,9 @@ width: 48%;
 
 .edited-card--feedback {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .edited-card__speaker-info {
@@ -102,7 +107,8 @@ width: 48%;
    align-items: center; 
    justify-content: flex-start;
    margin-left: 20px;
-    margin-top: 20px;
+  margin: 0 1.25rem;
+  margin-top: 20px;
   }
 
   .edited-card__speaker-picture-box {
@@ -136,7 +142,7 @@ width: 48%;
   }
 
   .edited-card__description--feedback {
-    padding: 0;
+    padding: 2.5625rem 1.9375rem;
   }
 
   .edited-card__speaker-position{    
@@ -145,4 +151,14 @@ color: $dark;
 font-size: 16px;
 font-weight: 400;
 line-height: 30px;
+  }
+  .edited-card__buttons--feedback{
+    width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  color: #a0a5b1;
+   margin-top: auto;
+   margin-bottom: 0;   
+   padding: 2.5625rem 1.9375rem;
+
   }
