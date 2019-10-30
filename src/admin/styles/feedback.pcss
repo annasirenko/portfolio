@@ -1,0 +1,176 @@
+.feedback-page{
+  padding: 60px;
+  
+
+  @include desktop {
+    padding: 50px 30px;
+  }
+
+  @include tablets {
+    padding: 40px 0;
+  }
+}
+.edit-card--feedback {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  
+  grid-template-areas:
+      "name name"
+      "download content"
+      "link content";
+  
+  @include desktop {
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+  "name name"
+  "download content"
+  ". content"
+}
+  @include tablets {
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+   "name"
+  "download"
+  "content"}
+}
+
+.edit-card__download-area--feedback {
+  padding: 10px;   
+  justify-self: center;
+}
+
+.feedback-upload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: #dee4ed; 
+    padding: 100px 50px; 
+    text-align: center;
+    border-radius: 50%;
+
+  }
+}
+
+.userpic-bg {
+  cursor: pointer;
+  background: #dee4ed;
+  height: 200px; 
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userpic-svg {
+height: 100px;
+width: 100px;
+fill: #fff;
+top: 20px;
+}
+
+
+
+
+.edit-card__row {
+  display: flex; 
+  width: 100%; 
+  justify-content: space-between;
+  @include desktop {
+    flex-direction: column
+  }
+}
+
+.edit-card__label--feedback {
+width: 48%;
+ @include desktop {
+   width: 100%
+  }
+}
+
+.edit-card__input--feedback {
+  padding-left: 0
+}
+.edit-card__textarea--feedback {
+  margin-left: 0;
+   margin-right: 0;
+  }
+
+
+.edited-card--feedback {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.edited-card__speaker-info {
+  display: flex; 
+  padding-bottom: 15px; 
+  border-bottom: 1px solid #b9bdc5;
+   align-items: center; 
+   justify-content: flex-start;
+   margin-left: 20px;
+  margin: 0 1.25rem;
+  margin-top: 20px;
+  }
+
+  .edited-card__speaker-picture-box {
+    border-radius: 50%;
+    overflow: hidden; 
+    height: 50px;
+    width: 50px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .edited-card__speaker-picture {
+    position: absolute;
+    top: 0;
+    max-width: 200%;
+    max-height: 200%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .edited-card__speaker-textinfo {
+    margin-left: 20px;
+  }
+
+  .edited-card__speaker-name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .edited-card__description--feedback {
+    padding: 2.5625rem 1.9375rem;
+  }
+
+  .edited-card__speaker-position{    
+opacity: 0.5;
+color: $dark;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+  }
+  .edited-card__buttons--feedback{
+    width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  color: #a0a5b1;
+   margin-top: auto;
+   margin-bottom: 0;   
+   padding: 2.5625rem 1.9375rem;
+
+  }

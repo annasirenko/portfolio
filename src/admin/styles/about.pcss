@@ -1,0 +1,58 @@
+.about-page {
+  padding: 60px;
+  
+
+  @include desktop {
+    padding: 50px 30px;
+  }
+
+  @include tablets {
+    padding: 40px 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+      padding: 0 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__add-group {
+    margin-left: 60px;
+    @include tablets{
+      margin-left: 0;
+      margin-top: 32px;
+    }
+  }
+
+  &__content {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px; */
+    margin-top: 60px;
+
+    @include desktop {
+      margin-top: 48px;
+      /* grid-gap: 20px; */
+    }
+
+    /* @include tablets {
+      grid-template-columns: 1fr;
+    } */
+  }
+
+  }
+
+  .page-title {
+    color: $dark;
+    font-size: 21px;
+    font-weight: 700;
+  
+    @include tablets {
+      font-size: 18px;
+    }
+  }

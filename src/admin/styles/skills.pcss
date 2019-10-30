@@ -1,0 +1,179 @@
+.section--skills {
+  display: grid; 
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  @include tablets {
+    grid-template-columns: 1fr
+  } 
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  &__header{
+    border-bottom: 1px solid #dedee0;
+    padding-bottom: 12px;
+  }
+  &__new-skill{
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+ 
+  }
+
+  .section-block {
+  background: #fff;
+  padding: 25px; 
+  margin: 10px;
+  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+  @include tablets{
+    margin: 10px 0px; 
+    padding: 10px
+  }
+}
+
+.skills-form {
+  padding: 6px 0;
+   
+   display: flex; 
+   justify-content: space-between;
+    align-items: center;
+   
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+
+.skill-form--name {
+   color: #4e586d;
+    font-size: 18px; 
+    font-weight: 700
+  }
+
+  
+.skill-name {
+  width: 60%; 
+  border-bottom: 1px solid transparent; 
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.skill-name--editing {
+  width: 60%; 
+  border-bottom: 1px solid #000;
+   margin-left: 10px;
+   font-size: 18px;
+   &-title{
+     font-weight: 700;
+     width: 60%; 
+  border-bottom: 1px solid #000;
+   margin-left: 10px;
+   font-size: 18px;
+   color: #4e586d;
+   }
+  }
+
+  .skill-value--editing{
+    padding-left: 10px;
+  }
+  .skill-name--edited{
+    &-title{
+      font-weight: 700;
+    }
+    width: 60%; 
+  border-bottom: 1px solid transparent;
+   margin-left: 10px;
+   &:focus{
+    border-bottom: 1px solid transparent;
+   }
+  }
+
+
+  
+
+  .skills-form--newskill{
+    grid-area: new; 
+    justify-content: flex-end
+  }
+
+  .new-skill{
+    width: 40%; 
+    border-bottom: 1px solid #000; 
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .skill-value {
+    width: 14%;
+     border-bottom: 1px solid #000;
+     margin-left: 10px;
+     font-size: 18px;
+     @include desktop{
+       width: 18%;
+     }
+     
+    }
+
+    .skill-value--new{
+      width: 14%;
+     border-bottom: 1px solid #000;
+     margin-left: 10px;
+     font-size: 18px;
+      margin-right: 30px;
+      @include desktop{
+        width: 18%;
+      }
+    }
+  
+
+    /* .form__skills{
+      &:after{
+        content: "%";
+    display: inline-block;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+      }
+    } */
+    .skills__percent{
+      position: relative;
+      &-measure{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+.old-skill {
+  margin-left: 15px;
+  font-size:18px;
+  width: 50%;
+  color: #414c63;
+  @include desktop{
+    width: 30%;
+  }
+}
+  
+.skill-value--edited {
+  border-bottom: 1px solid transparent;
+   font-size: 18px;
+   
+  padding-left: 10px;
+  &:focus{
+    border-bottom: 1px solid transparent;
+  }
+  }
+
+  /* .skills-card__percent{
+    position: relative;
+    &-measure{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+    }
+  } */
+
+
+
