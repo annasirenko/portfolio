@@ -47,10 +47,10 @@
                           form.skills-form.skills-form--oldskill  
                             if skill[2]
                               input(required placeholder="Навык" value=skill[0] ).skill-name--editing.old-skill
-                              input(required type="number" placeholder=`${skill[1]}%` ).skill-value.skill-value--editing
+                              input(required type="number" placeholder=`${skill[1]}  %` ).skill-value.skill-value--editing
                             else                       
                               input(required placeholder="Навык" value=skill[0] readonly).skill-name--edited.old-skill
-                              input(required type="number" placeholder=`${skill[1]}%` readonly).skill-value.skill-value--edited
+                              input(required type="number" placeholder=`${skill[1]}  %` readonly).skill-value.skill-value--edited
                             if skill[2]
                               .form-yesno-buttons
                                 button(type="submit").button.button--green 
@@ -63,7 +63,7 @@
 
                     form.skills-card__new-skill.skills-form--newskill.skills-form  
                       input(required placeholder="Новый навык").new-skill
-                      input(required type="number" placeholder="100%").skill-value--new
+                      input(required type="number" placeholder="100  %").skill-value--new
                       button(type="submit").basic-button_flat.basic-button_circle.basic-button_primary
                         .basic-button__icon-wrapper
                           icon.basic-button__icon(name="plus")  
@@ -101,8 +101,11 @@
                     button(type = "submit").button.button--submit.button--edit-submit сохранить
               .edited-blocks
                 button.button.button--add-card
-                  .button__pic +
-                  p.button__name Добавить #[br] работу
+                  input.inputfile(type="file" required name="file" id="file")
+                  label.inputfile__label(for="file")
+                    .button__pic +
+                    p.button__name Добавить #[br] работу
+                  
                 .section-block.edited-card
                   .edited-card__picture-box
                     img(src='../images/content/1.jpg').edited-card__picture
@@ -226,8 +229,10 @@
 
               .edited-blocks
                 button.button.button--add-card
-                  .button__pic +
-                  p.button__name Добавить #[br] отзыв
+                  input.inputfile(type="file" required name="file" id="file")
+                  label.inputfile__label(for="file")
+                    .button__pic +
+                    p.button__name Добавить #[br] работу
                 .section-block.edited-card.edited-card--feedback
                   .edited-card__speaker-info
                     .edited-card__speaker-picture-box
