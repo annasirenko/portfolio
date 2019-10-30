@@ -98,7 +98,7 @@
                       button(type="button").button.edit-card__cross 
                   .edit-card__buttons
                     button(type = "reset").edit-card__reset Отмена
-                    button(type = "submit").button.button--submit.button--edit-submit сохранить
+                    button(type = "submit").button--edit-submit сохранить
               .edited-blocks
                 button.button.button--add-card
                   input.inputfile(type="file" required name="file" id="file")
@@ -225,7 +225,7 @@
                 
                   .edit-card__buttons
                     button(type = "reset").edit-card__reset Отмена
-                    button(type = "submit").button.button--submit.button--edit-submit сохранить
+                    button(type = "submit").button--edit-submit сохранить
 
               .edited-blocks
                 button.button.button--add-card
