@@ -7,14 +7,14 @@
       "download content"
       "link content";
   
-  @include tablets {
+  @include desktop {
   grid-template-columns: 1fr 2fr;
   grid-template-areas: 
   "name name"
   "download content"
   ". content"
 }
-  @include phones {
+  @include tablets {
     grid-template-columns: 1fr; 
     grid-template-areas:
    "name"
@@ -72,14 +72,14 @@ top: 20px;
   display: flex; 
   width: 100%; 
   justify-content: space-between;
-  @include tablets {
+  @include desktop {
     flex-direction: column
   }
 }
 
 .edit-card__label--feedback {
 width: 48%;
- @include tablets {
+ @include desktop {
    width: 100%
   }
 }

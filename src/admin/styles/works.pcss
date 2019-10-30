@@ -7,8 +7,8 @@
   "download content"
   ". content";  
   grid-column-gap: 20px;
-  @include tablets {
-  padding: 0 6.875rem;
+  @include desktop {
+  padding: 16px 6.875rem;
   grid-template-columns: 1fr; 
   grid-template-rows: auto auto 2fr;
   grid-template-areas: 
@@ -16,7 +16,7 @@
   "download"
   "content"
 }
-@include phones{
+@include tablets{
   padding: 0 0.875rem;
 }
 }
@@ -60,7 +60,7 @@ line-height: 34px;
    display: flex; 
    flex-direction: column;
     font-weight: 600;
-    @include tablets{
+    @include desktop{
       width: 92%;
       padding-top: 40px;
     }
@@ -129,7 +129,7 @@ line-height: 34px;
   margin-top: 30px;
   display: flex; 
   justify-content: flex-end;
-  @include tablets {
+  @include desktop {
     justify-content:center;
     margin-bottom: 20px;
   }
@@ -147,10 +147,10 @@ line-height: 34px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  @include tablets {
+  @include desktop {
     grid-template-columns:1fr 1fr
   }
-  @include phones {
+  @include tablets {
     grid-template-columns: 1fr
   } 
 }
