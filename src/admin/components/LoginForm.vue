@@ -91,3 +91,67 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+@import '../../styles/mixins.pcss';
+
+.login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 563px;
+  width: 100vw;
+  padding: 2.75rem 78px;
+  background-color: white;
+
+  @include phones {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    fill: $dark;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    outline: none;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  &__body {
+    @include phones {
+      align-self: stretch;
+    }
+  }
+
+  &__title {
+    color: $dark;
+    font-size: 36px;
+    font-weight: 700;
+
+    @include phones {
+      font-size: 30px;
+    }
+  }
+
+  &__control {
+    margin-top: 2.75rem;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}
+
+
+
+</style>
