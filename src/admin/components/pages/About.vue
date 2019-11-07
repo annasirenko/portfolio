@@ -63,8 +63,14 @@ export default{
   }),
   methods: {
     ...mapActions("categories", ["addCategory"]),
-    addNewCategory(){
-      this.addNewCategory(this.title)
+    async addNewCategory(){
+      try {
+         await this.addCategory(this.title);
+      } catch (error) {
+        alert(error.message);
+        
+      }
+     
     }
   }
 }

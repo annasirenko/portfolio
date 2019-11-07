@@ -5,8 +5,9 @@
       :key="index"
       :to="tab.link"
       :title="tab.name"
+      v-html="tab.name"
       exact-active-class="tabs__item_active"
-    ) {{ tab.name }}
+    ) 
 </template>
 
 <script>

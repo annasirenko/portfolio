@@ -2,7 +2,7 @@ import axios from "axios";
 
 const token = localStorage.getItem("token");
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.headers["Authorization"] = `Bearer ${token}`;
 
 axios.interceptors.response.use(
